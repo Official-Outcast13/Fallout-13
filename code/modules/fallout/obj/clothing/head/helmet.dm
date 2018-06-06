@@ -14,6 +14,7 @@
 	put_on_delay = 10
 	strip_delay = 20
 	self_weight = 3
+	NoDelimb = 1
 
 /obj/item/clothing/head/helmet/f13/tribal
 	name = "tribal power helmet"
@@ -26,6 +27,7 @@
 	put_on_delay = 10
 	strip_delay = 30
 	self_weight = 2
+	NoDelimb = 1
 
 /obj/item/clothing/head/helmet/f13/motorcycle
 	name = "motorcycle helmet"
@@ -396,6 +398,7 @@
 	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 3
+	NoDelimb = 1
 
 	darkness_view = 8
 	invis_view = SEE_INVISIBLE_MINIMUM
@@ -435,6 +438,7 @@
 	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 3
+	NoDelimb = 1
 
 	darkness_view = 8
 	invis_view = SEE_INVISIBLE_MINIMUM
@@ -474,6 +478,7 @@
 	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 4
+	NoDelimb = 1
 
 	darkness_view = 8
 	invis_view = SEE_INVISIBLE_MINIMUM
@@ -513,6 +518,7 @@
 	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 4
+	NoDelimb = 1
 
 	darkness_view = 8
 	invis_view = SEE_INVISIBLE_MINIMUM
@@ -552,6 +558,7 @@
 	strip_delay = 100
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 4
+	NoDelimb = 1
 
 	darkness_view = 8
 	invis_view = SEE_INVISIBLE_MINIMUM
@@ -592,6 +599,7 @@
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	self_weight = 5
+	NoDelimb = 1
 
 /obj/item/clothing/head/helmet/power_armor/t51b
 	name = "T-51b power helmet"
@@ -610,6 +618,7 @@
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	self_weight = 5
+	NoDelimb = 1
 
 /obj/item/clothing/head/helmet/power_armor/t45d
 	name = "T-45d power helmet"
@@ -626,6 +635,7 @@
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	self_weight = 5
+	NoDelimb = 1
 
 /obj/item/clothing/head/helmet/power_armor/ncr
 	name = "NCR power helmet"
@@ -640,6 +650,7 @@
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	self_weight = 5
+	NoDelimb = 1
 
 //Knights of the Apocalypse
 
