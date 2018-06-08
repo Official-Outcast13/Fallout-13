@@ -146,12 +146,12 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 
 	var/list/data = list(
 	"saves_data" = "[saves_data]",
-	"r_name" = "[be_random_name ? "Yes" : "No"]",
+	"r_name" = "No",
 	"name" = "[real_name]",
 
 	"gender" = "[gender == MALE ? "&#9794;Male" : "&#9792;Female"]",
 	"age" = "[age]",
-	"r_body" = "[be_random_body ? "Yes" : "No"]",
+	"r_body" = "No",
 	"species" = "[pref_species ? pref_species.name : "Human"]",
 	"skin_tone" = "[skin_tone]",
 	"factions_data" = "[factions_data]",
@@ -195,8 +195,6 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 		<table width='100%'>
 			<tr>
 				<td width='75%' valign='top'>
-					<a href='?_src_=prefs;preference=name;task=random'>&#9762; Random Name</a>
-					<a href='?_src_=prefs;preference=name'>Always Random Name: [data["r_name"]]</a>
 					<br>
 					<b>Name:</b>
 					<a href='?_src_=prefs;preference=name;task=input'>[data["name"]]</a>
@@ -218,11 +216,6 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 		<h2>Body</h2>
 		<table>
 			<tr>
-				<td>
-					<a href='?_src_=prefs;preference=all;task=random'>&#9762; Random Body</a>
-				</td>
-				<td>
-					<a href='?_src_=prefs;preference=all'>Always Random Body: [data["r_body"]]</a><br>
 				</td>
 			</tr>
 			<tr>
@@ -290,7 +283,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 					<a href='?_src_=prefs;preference=next;task=equip;item=shoes'>&gt;</a>
 				</div>
 			</div>
-		</div><!--1 áëîê 39-->
+		</div><!--1 Ã¡Ã«Ã®Ãª 39-->
 		<div class="third_block_39 job">
 		<h3>Choose your role</h3><br>
 			<div class="job_p">
