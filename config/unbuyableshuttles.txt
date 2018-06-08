@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Listing maps here will make the shuttle not available to buy in comms console.
 #Maps must be the full path to them
 #Only shuttles with a price in the code will work with this!
@@ -15,4 +16,23 @@
 #_maps/shuttles/emergency_mini.dmm
 #_maps/shuttles/emergency_imfedupwiththisworld.dmm
 #_maps/shuttles/emergency_goon.dmm
+=======
+#Listing maps here will make the shuttle not available to buy in comms console.
+#Maps must be the full path to them
+#Only shuttles with a price in the code will work with this!
+#SPECIFYING AN INVALID MAP WILL RESULT IN RUNTIMES ON GAME START
+
+#_maps/shuttles/emergency_asteroid.dmm
+#_maps/shuttles/emergency_bar.dmm
+#_maps/shuttles/emergency_meteor.dmm
+#_maps/shuttles/emergency_luxury.dmm
+#_maps/shuttles/emergency_birdboat.dmm
+#_maps/shuttles/emergency_box.dmm
+#_maps/shuttles/emergency_clown.dmm
+#_maps/shuttles/emergency_cramped.dmm
+#_maps/shuttles/emergency_meta.dmm
+#_maps/shuttles/emergency_mini.dmm
+#_maps/shuttles/emergency_imfedupwiththisworld.dmm
+#_maps/shuttles/emergency_goon.dmm
+>>>>>>> 48cb787f1a4c4946a703ffa769429655a6109e3b
 #_maps/shuttles/emergency_wabbajack.dmm

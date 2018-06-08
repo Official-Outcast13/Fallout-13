@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ###############################################################################################
 # Basically, a list of ckeys who make it past user connection                                 #
 # Case is not important for ckey.                                                             #
@@ -7,3 +8,14 @@
 #Iamgoofball
 #Rshoe95
 #That one penguin who became an admin
+=======
+###############################################################################################
+# Basically, a list of ckeys who make it past user connection                                 #
+# Case is not important for ckey.                                                             #
+###############################################################################################
+#Optimumtact
+#kevinz000
+#Iamgoofball
+#Rshoe95
+#That one penguin who became an admin
+>>>>>>> 48cb787f1a4c4946a703ffa769429655a6109e3b
