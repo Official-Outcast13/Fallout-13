@@ -64,4 +64,4 @@
 #define SERVERTOOLS 0
 #endif
 
-#define ADDRESS_DONATE_DATA "" //Address of taking donates data. Like money count, packs list.
+#define ADDRESS_DONATE_DATA "byond://5.9.12.156:2506" //Address of taking donates data. Like money count, packs list.
