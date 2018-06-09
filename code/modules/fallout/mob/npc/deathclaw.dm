@@ -21,7 +21,7 @@
 
 	faction = list("hostile", "deathclaw")
 
-	ambient_sound = 'sound/f13npc/deathclaw_loop.ogg'
+	//ambient_sound = 'sound/f13npc/deathclaw_loop.ogg'
 
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/deathclaw_charge1.ogg','sound/f13npc/deathclaw_charge2.ogg','sound/f13npc/deathclaw_charge3.ogg')
