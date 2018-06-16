@@ -35,7 +35,7 @@ before_script:
   - tools/travis/before_build_byond.sh
 
 script:
-  - tools/travis/check_filedirs.sh tgstation.dme
+  - tools/travis/check_filedirs.sh fallout13.dme
   - tools/travis/build_tools.sh
   - tools/travis/build_byond.sh
 
