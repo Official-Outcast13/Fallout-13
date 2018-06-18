@@ -38,8 +38,11 @@
 
 /obj/structure/fence/relative(forced = 0)
 	// Testing - Sansaur
+	// For some reason it was decided that fences wouldn't reload their icons after the game had started
+	// If this is not wanted, remove the comments, but then you'll have to use the "forced" parameter to make the icon reload on an event
 	//if(ticker.current_state == GAME_STATE_PLAYING && !forced)
 	//	return
+	recalculate_junction()
 	var/icon_junction = 0
 	switch(junction)
 		if(0 to 3)
