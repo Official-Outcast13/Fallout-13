@@ -1042,7 +1042,7 @@ var/list/preferences_datums = list()
 				if("changeslot")
 					if(!load_character(text2num(href_list["num"])))
 						random_character()
-						real_name = random_unique_name(gender)
+						real_name = "John ContactAnAdmin Dough"
 						save_character()
 					update_preview = 1
 
@@ -1064,9 +1064,9 @@ var/list/preferences_datums = list()
 		var/firstspace = findtext(real_name, " ")
 		var/name_length = length(real_name)
 		if(!firstspace)	//we need a surname
-			real_name += " [pick(last_names)]"
+			real_name += "Somethings"
 		else if(firstspace == name_length)
-			real_name += "[pick(last_names)]"
+			real_name += "Wrong... you should contact an admin."
 
 	character.real_name = real_name
 	character.name = character.real_name

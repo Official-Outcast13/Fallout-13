@@ -11,7 +11,7 @@
 	skin_tone = random_skin_tone()
 	hair_style = random_hair_style(gender)
 	facial_hair_style = random_facial_hair_style(gender)
-	hair_color = random_short_color()
+	hair_color = "Black"
 	facial_hair_color = hair_color
 	eye_color = random_eye_color()
 	if(!pref_species)

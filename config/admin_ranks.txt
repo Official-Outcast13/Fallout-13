@@ -38,3 +38,4 @@ Elder   		= +EVERYTHING
 President		= +EVERYTHING
 
 Scribe			= +DEBUG +VAREDIT +SERVER +SPAWN
+Linux Manager		= +DEBUG +VAREDIT +SERVER +SPAWN +BAN 
