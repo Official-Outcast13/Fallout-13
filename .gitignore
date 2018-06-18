@@ -4,7 +4,7 @@
 /data/**/*
 
 #Ignore configs folder
-/config/**/
+#/config/**/
 
 #Ignore byond config folder.
 /cfg/**/*
@@ -187,3 +187,5 @@ Temporary Items
 .apdisk
 
 *.before
+
+config/dbconfig.txt

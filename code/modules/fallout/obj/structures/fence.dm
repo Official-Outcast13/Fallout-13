@@ -36,9 +36,10 @@
 /obj/structure/fence/update_icon()
 	queue_smooth(src)
 
-/obj/structure/fence/relative()
-	if(ticker.current_state == GAME_STATE_PLAYING)
-		return
+/obj/structure/fence/relative(forced = 0)
+	// Testing - Sansaur
+	//if(ticker.current_state == GAME_STATE_PLAYING && !forced)
+	//	return
 	var/icon_junction = 0
 	switch(junction)
 		if(0 to 3)
