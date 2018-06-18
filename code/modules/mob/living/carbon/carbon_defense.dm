@@ -11,10 +11,6 @@
 
 /mob/living/carbon/check_projectile_dismemberment(obj/item/projectile/P, def_zone)
 	var/obj/item/bodypart/affecting = get_bodypart(def_zone)
-	if(affecting && istype(affecting, /obj/item/clothing))
-		var/obj/item/clothing/C = affecting
-		if(C.NoDelimb)
-			return
 	if(affecting && affecting.dismemberable && affecting.get_damage() >= (affecting.max_damage - P.dismemberment))
 		affecting.dismember(P.damtype)
 
