@@ -1415,3 +1415,15 @@ for(type in view(range, dview_mob))
 	if(ispath(type, /obj/item/weapon) && !ispath(type, /obj/item/weapon/reagent_containers))
 		return "weapon"
 	return "misc"
+
+/proc/REF(input)
+	//if(istype(input, /datum))
+	//	return "\[[url_encode(thing.tag)]\]"
+	//	var/datum/thing = input
+	//	if(thing.datum_flags & DF_USE_TAG)
+	//		if(!thing.tag)
+	//			stack_trace("A ref was requested of an object with DF_USE_TAG set but no tag: [thing]")
+	//			thing.datum_flags &= ~DF_USE_TAG
+	//		else
+	//			return "\[[url_encode(thing.tag)]\]"
+	return "\ref[input]"
