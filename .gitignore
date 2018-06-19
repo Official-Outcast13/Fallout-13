@@ -3,12 +3,8 @@
 #Ignore everything in datafolder and subdirectories
 /data/**/*
 
-#Ignore configs folder
-/config/**/*
-
 #Allow names and backup folder
-!/config/*/names
-!/config/*/backup
+
 
 #Ignore byond config folder.
 /cfg/**/*
@@ -191,5 +187,3 @@ Temporary Items
 .apdisk
 
 *.before
-
-config/dbconfig.txt
