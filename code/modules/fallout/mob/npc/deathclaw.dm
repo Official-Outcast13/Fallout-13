@@ -2,7 +2,7 @@
 
 /mob/living/simple_animal/hostile/deathclaw
 	name = "deathclaw"
-	desc = "A huge monster."
+	desc = "A huge monster. You're fucked."
 	icon = 'icons/fallout/mobs/deathclaw.dmi'
 	icon_state = "deathclaw"
 	icon_living = "deathclaw"
