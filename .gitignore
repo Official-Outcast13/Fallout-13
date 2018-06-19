@@ -4,7 +4,11 @@
 /data/**/*
 
 #Ignore configs folder
-#/config/**/
+/config/**/*
+
+#Allow names and backup folder
+!/config/*/names
+!/config/*/backup
 
 #Ignore byond config folder.
 /cfg/**/*
