@@ -40,7 +40,8 @@ client
 		add_pack(pack_id, reload)
 			content_packs |= pack_id
 			var/datum/content_pack/pack = SScontent.get_pack(pack_id)
-			pack.on_set(src)
+			if(pack)
+				pack.on_set(src)
 			if(reload)
 				load_content_data()
 
