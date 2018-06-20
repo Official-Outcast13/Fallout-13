@@ -72,6 +72,18 @@
 	return ..()
 
 /mob/living/simple_animal/hostile/Life()
+	// Indeed, making the mobs NOT act speeds the process up
+	// I won't make all simple animals not act before the player, because maybe some will be designed to act away from them
+	//return
+	var/continue_checker = 0
+	var/list/Mobs = ohearers(vision_range, targets_from)
+	for(var/mob/M in Mobs)
+		if(M.ckey)
+			if(!findtext(M.ckey,"@"))
+				continue_checker = 1
+
+	if(!continue_checker)
+		return
 	. = ..()
 	if(!.) //dead
 		walk(src, 0) //stops walking
