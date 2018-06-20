@@ -319,7 +319,7 @@
 		stored_caps -= price_list[target_type]
 
 		// Create item
-		var/atom/NewItem = new target_type(connected_pod.loc)
+		new target_type(connected_pod.loc)
 		to_chat(usr, "Done. *boop*")
 	else
 		to_chat(usr, "Not enough caps.")

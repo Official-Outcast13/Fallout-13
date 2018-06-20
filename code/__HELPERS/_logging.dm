@@ -79,3 +79,29 @@
 /proc/log_chat(text)
 	if (config.log_pda)
 		diary << "\[[time_stamp()]]CHAT: [text]"
+
+/proc/log_world(text)
+	diary << "\[[time_stamp()]] [text]"
+	world.log << "\[[time_stamp()]] [text]"
+
+/proc/datum_info_line(datum/D)
+	if(!istype(D))
+		return
+	if(!ismob(D))
+		return "[D] ([D.type])"
+	var/mob/M = D
+	return "[M] ([M.ckey]) ([M.type])"
+
+/proc/atom_loc_line(atom/A)
+	if(!istype(A))
+		return
+	var/turf/T = get_turf(A)
+	if(istype(T))
+		return "[A.loc] [COORD(T)] ([A.loc.type])"
+	else if(A.loc)
+		return "[A.loc] (0, 0, 0) ([A.loc.type])"
+
+/proc/log_runtime(text)
+	world.log << "Runtime: [text]"
+	//world_runtime_log << text 
+	//WRITE_LOG(GLOB., text)

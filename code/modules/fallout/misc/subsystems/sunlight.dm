@@ -30,7 +30,7 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 	var/list/currentrun_lights
 	var/list/currentrun_corners
 	var/list/currentrun_overlays
-	var/list/sunlighting_planes
+	var/list/obj/screen/plane_master/lighting/sunlighting_planes = list()
 
 	var/datum/time_of_day/current_step_datum
 	var/datum/time_of_day/next_step_datum
