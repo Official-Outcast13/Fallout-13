@@ -81,6 +81,7 @@
 		if(M.ckey)
 			if(!findtext(M.ckey,"@"))
 				continue_checker = 1
+				break
 
 	if(!continue_checker)
 		return

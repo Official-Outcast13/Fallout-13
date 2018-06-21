@@ -397,6 +397,9 @@
 		var/turf/T = get_step(src,cdir)
 		if(!T)
 			continue
+		if(T.density == 1)
+			junction |= cdir
+			continue
 		for(var/a_type in canSmoothWith)
 			var/A = locate(a_type) in T
 			if(A || T.type == a_type)
