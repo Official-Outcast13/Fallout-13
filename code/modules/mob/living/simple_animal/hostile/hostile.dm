@@ -53,6 +53,9 @@
 	var/AIStatus = AI_ON //The Status of our AI, can be set to AI_ON (On, usual processing), AI_IDLE (Will not process, but will return to AI_ON if an enemy comes near), AI_OFF (Off, Not processing ever)
 	var/atom/targets_from = null //all range/attack/etc. calculations should be done from this atom, defaults to the mob itself, useful for Vehicles and such
 	var/attack_all_objects = FALSE //if true, equivalent to having a wanted_objects list containing ALL objects.
+	var/playerCheck = TRUE // Do we want to check if there are nearby players for this mob to live? By default we want (This means that the mob won't die out of screen too)
+	var/alwaysActive = FALSE // Just in case admins want to make a specific mob act outside of the screen while in game
+	var/active = FALSE // Starting up in FALSE, and maybe we could move this to the function itself
 
 	var/lose_patience_timer_id //id for a timer to call LoseTarget(), used to stop mobs fixating on a target they can't reach
 	var/lose_patience_timeout = 300 //30 seconds by default, so there's no major changes to AI behaviour, beyond actually bailing if stuck forever
@@ -75,16 +78,17 @@
 	// Indeed, making the mobs NOT act speeds the process up
 	// I won't make all simple animals not act before the player, because maybe some will be designed to act away from them
 	//return
-	var/continue_checker = 0
-	var/list/Mobs = ohearers(vision_range, targets_from)
-	for(var/mob/M in Mobs)
-		if(M.ckey)
-			if(!findtext(M.ckey,"@"))
-				continue_checker = 1
-				break
+	// We're putting this behind the call to the precursor function because this is more of a harsh solution to the lag problem
+	if(!alwaysActive)
+		if(playerCheck)
+			active = isNearPlayers()
+			playerCheck = FALSE
+			spawn(20)
+				playerCheck = TRUE
 
-	if(!continue_checker)
+	if(!active)
 		return
+
 	. = ..()
 	if(!.) //dead
 		walk(src, 0) //stops walking
@@ -459,3 +463,12 @@
 	if(!value)
 		value = initial(search_objects)
 	search_objects = value
+
+/mob/living/simple_animal/hostile/proc/isNearPlayers()
+	var/list/Mobs = ohearers(vision_range, targets_from)
+	for(var/mob/M in Mobs)
+		if(M.ckey)
+			if(!findtext(M.ckey,"@"))
+				return 1
+
+	return 0
