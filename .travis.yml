@@ -10,7 +10,7 @@ env:
     - DM_MAPFILE=""
     matrix:
     - BUILD_TOOLS=true
-    - DM_MAPFILE="tgstation2"
+    - DM_MAPFILE="texas"
 
 cache:
   directories:
