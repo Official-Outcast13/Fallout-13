@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Official-Outcast13/Fallout-13.svg?branch=dev)](https://travis-ci.org/Official-Outcast13/Fallout-13)
+
 ##Fallout 13 Beta 0.1
 
 **Website:** https://www.reddit.com/r/Fallout13
