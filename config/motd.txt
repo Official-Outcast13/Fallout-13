@@ -15,3 +15,4 @@ https://bitbucket.org/Jackerzz/fallout-13 </b></i>
 
 <i>Majorly special thanks to Memeopolis/Kachnov for helping us implement the aiming system</i>
 <i>Props to Comrade Sully for our title screen. He's lit</i>
+

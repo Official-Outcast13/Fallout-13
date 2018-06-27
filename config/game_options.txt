@@ -1,3 +1,4 @@
+
 ### HEALTH ###
 
 #Damage multiplier, effects both weapons and healing on all mobs. For example, 1.25 would result in 25% higher damage.
@@ -478,3 +479,4 @@ LAVALAND_BUDGET 60
 
 ## Space Ruin Budged
 Space_Budget 16
+

@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 Badmin
+=======
+Badmin
+>>>>>>> 48cb787f1a4c4946a703ffa769429655a6109e3b
 <span class='adminooc'>Spanmin</span>
