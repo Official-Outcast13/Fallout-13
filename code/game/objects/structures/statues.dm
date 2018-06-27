@@ -336,3 +336,4 @@
 	name = "Cross"
 	desc = "A headstone to mark one that has fallen."
 	icon_state = "groovewood"
+	oreAmount = 1

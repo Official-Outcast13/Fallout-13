@@ -1,0 +1,17 @@
+<!-- Most valid html will work in here, excluding images. -->
+
+<h1>Welcome to Fallout 13 Roleplay!</h1>
+
+<i><b>We claim absolutely no copyright over Fallout 13 or the game franchise in general. Please support the official developers, as they are responsible for the product you see.
+https://bitbucket.org/Jackerzz/fallout-13 </b></i>
+
+<b>Server Rules: https://docs.google.com/document/d/1TfsJ7hx6Lh8r4EjFIaEo23GPtdEedvtYmOnNGtwZR-8/edit?usp=sharing<b>
+
+<b>Discord: https://discord.gg/38BaGDe<b>
+
+<i>This server is a high-RP setting, please read through the rules and affiliate yourself on what is and is not to be expected of you as you play.<i>
+
+
+
+<i>Majorly special thanks to Memeopolis/Kachnov for helping us implement the aiming system</i>
+<i>Props to Comrade Sully for our title screen. He's lit</i>

@@ -2,7 +2,7 @@
 
 /mob/living/simple_animal/hostile/deathclaw
 	name = "deathclaw"
-	desc = "A huge monster."
+	desc = "A huge monster. You're fucked."
 	icon = 'icons/fallout/mobs/deathclaw.dmi'
 	icon_state = "deathclaw"
 	icon_living = "deathclaw"
@@ -21,7 +21,7 @@
 
 	faction = list("hostile", "deathclaw")
 
-	ambient_sound = 'sound/f13npc/deathclaw_loop.ogg'
+	//ambient_sound = 'sound/f13npc/deathclaw_loop.ogg'
 
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/deathclaw_charge1.ogg','sound/f13npc/deathclaw_charge2.ogg','sound/f13npc/deathclaw_charge3.ogg')

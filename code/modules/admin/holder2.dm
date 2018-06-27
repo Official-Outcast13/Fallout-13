@@ -1,5 +1,5 @@
 var/list/admin_datums = list()
-
+var/global/href_token = GenerateToken()
 /datum/admins
 	var/datum/admin_rank/rank
 
@@ -13,6 +13,7 @@ var/list/admin_datums = list()
 	var/datum/newscaster/wanted_message/admincaster_wanted_message = new /datum/newscaster/wanted_message
 	var/datum/newscaster/feed_channel/admincaster_feed_channel = new /datum/newscaster/feed_channel
 	var/admin_signature
+	var/href_token
 
 /datum/admins/New(datum/admin_rank/R, ckey)
 	if(!ckey)
@@ -28,6 +29,7 @@ var/list/admin_datums = list()
 	rank = R
 	admin_signature = "Nanotrasen Officer #[rand(0,9)][rand(0,9)][rand(0,9)]"
 	admin_datums[ckey] = src
+	href_token = GenerateToken()
 
 /datum/admins/proc/associate(client/C)
 	if(istype(C))
@@ -97,3 +99,25 @@ you will have to do something like if(client.rights & R_ADMIN) yourself.
 			return 0
 		return 1
 	return 0
+
+
+
+/proc/RawHrefToken(forceGlobal = FALSE)
+	var/tok = href_token
+	if(!forceGlobal && usr)
+		var/client/C = usr.client
+		if(!C)
+			CRASH("No client for HrefToken()!")
+		var/datum/admins/holder = C.holder
+		if(holder)
+			tok = holder.href_token
+	return tok
+
+/proc/HrefToken(forceGlobal = FALSE)
+	return "admin_token=[RawHrefToken(forceGlobal)]"
+
+	// Badly placed - Sansaur
+/proc/GenerateToken()
+	. = ""
+	for(var/I in 1 to 32)
+		. += "[rand(10)]"

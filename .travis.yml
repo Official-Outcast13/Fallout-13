@@ -3,14 +3,14 @@ sudo: false
 
 env:
     global:
-    - BYOND_MAJOR="510"
-    - BYOND_MINOR="1346"
+    - BYOND_MAJOR="511"
+    - BYOND_MINOR="1385"
     - NODE_VERSION="4"
     - BUILD_TOOLS=false
     - DM_MAPFILE=""
     matrix:
     - BUILD_TOOLS=true
-    - DM_MAPFILE="tgstation2"
+    - DM_MAPFILE="texas"
 
 cache:
   directories:
@@ -35,7 +35,7 @@ before_script:
   - tools/travis/before_build_byond.sh
 
 script:
-  - tools/travis/check_filedirs.sh tgstation.dme
+  - tools/travis/check_filedirs.sh fallout13.dme
   - tools/travis/build_tools.sh
   - tools/travis/build_byond.sh
 

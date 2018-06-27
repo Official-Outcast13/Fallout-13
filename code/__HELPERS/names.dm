@@ -1,3 +1,4 @@
+
 /proc/lizard_name(gender)
 	if(gender == MALE)
 		return "[pick(lizard_names_male)]-[pick(lizard_names_male)]"
