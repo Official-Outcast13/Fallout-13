@@ -7,7 +7,7 @@ SQL_ENABLED
 
 ## Server the MySQL database can be found at.
 # Examples: localhost, 200.135.5.43, www.mysqldb.com, etc.
-ADDRESS localhost
+ADDRESS 127.0.0.1
 
 ## MySQL server port (default is 3306).
 PORT 3306
@@ -27,7 +27,7 @@ FEEDBACK_DATABASE feedback
 FEEDBACK_TABLEPREFIX 
 
 ## Username/Login used to access the database.
-FEEDBACK_LOGIN FO13
+FEEDBACK_LOGIN deathclaw
 
 ## Password used to access the database.
-FEEDBACK_PASSWORD reBal7
+FEEDBACK_PASSWORD wasteland
