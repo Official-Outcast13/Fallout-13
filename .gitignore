@@ -3,8 +3,8 @@
 #Ignore everything in datafolder and subdirectories
 /data/**/*
 
-#Ignore configs folder
-/config/**/
+#Allow names and backup folder
+
 
 #Ignore byond config folder.
 /cfg/**/*

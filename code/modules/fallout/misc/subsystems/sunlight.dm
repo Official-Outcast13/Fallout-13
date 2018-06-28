@@ -30,7 +30,7 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 	var/list/currentrun_lights
 	var/list/currentrun_corners
 	var/list/currentrun_overlays
-	var/list/sunlighting_planes
+	var/list/obj/screen/plane_master/lighting/sunlighting_planes = list()
 
 	var/datum/time_of_day/current_step_datum
 	var/datum/time_of_day/next_step_datum
@@ -132,7 +132,7 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 		L.needs_update = FALSE
 
 		if (MC_TICK_CHECK)
-			return
+			return 
 
 	if (resuming_stage == STAGE_SOURCES || !resumed)
 		currentrun_corners  = sunlighting_update_corners
@@ -147,7 +147,7 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 		C.update_overlays()
 		C.needs_update = FALSE
 		if (MC_TICK_CHECK)
-			return
+			return 
 
 	if (resuming_stage == STAGE_CORNERS || !resumed)
 		currentrun_overlays = sunlighting_update_overlays.Copy()
@@ -164,7 +164,8 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 		O.update_overlay()
 		O.needs_update = FALSE
 		if (MC_TICK_CHECK)
-			return
+			return 
+
 #if defined(LIGHTING_ANIMATION)
 	for(var/atom/movable/sunlighting_overlay/O in sunlighting_update_overlays)
 		O.animate_color()

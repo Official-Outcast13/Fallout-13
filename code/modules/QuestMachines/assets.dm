@@ -1,5 +1,9 @@
+// Cleaning this, it's giving errors. When these images are ready, uncomment - Sansaur
+
 /datum/asset/simple/bounty_employers
 	assets = list(
+
+/*
 		"employer_00.png" = "icons/bounty_employers/employer_00.png",
 		"employer_01.png" = "icons/bounty_employers/employer_01.png",
 		"employer_02.png" = "icons/bounty_employers/employer_02.png",
@@ -16,4 +20,6 @@
 		"employer_13.png" = "icons/bounty_employers/employer_13.png",
 		"employer_14.png" = "icons/bounty_employers/employer_14.png",
 		"employer_15.png" = "icons/bounty_employers/employer_15.png"
+
+*/
 	)
