@@ -2,11 +2,9 @@
 
 #Ignore everything in datafolder and subdirectories
 /data/**/*
-
 #Ignore byond config folder.
 /cfg/**/*
-config/*
-!config/*/
+/config/*.txt
 
 #Ignore compiled files and other files generated during compilation.
 *.mdme
@@ -165,7 +163,7 @@ $RECYCLE.BIN/
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 # Thumbnails
 ._*
