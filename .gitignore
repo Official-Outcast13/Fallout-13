@@ -3,11 +3,10 @@
 #Ignore everything in datafolder and subdirectories
 /data/**/*
 
-#Allow names and backup folder
-
-
 #Ignore byond config folder.
 /cfg/**/*
+config/*
+!config/*/
 
 #Ignore compiled files and other files generated during compilation.
 *.mdme
