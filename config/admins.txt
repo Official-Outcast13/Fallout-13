@@ -5,7 +5,7 @@
 # All punctuation (spaces etc) EXCEPT '-', '_' and '@' will be stripped from rank names.      #
 # Ranks can be anything defined in admin_ranks.txt                                            #
 # NOTE: if the rank-name cannot be found in admin_ranks.txt, they will not be adminned! ~Carn #
-# NOTE: syntax was changed to allow hyphenation of ranknames, since spaces are stripped.      #
+# NOTE: syntax was changed to allow hyphenation of ranknames, since spaces are stripped. y     #
 ###############################################################################################
 LiquidRecluse = Elder
 Verhulst = Elder
