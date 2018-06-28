@@ -9,9 +9,9 @@
  * Glass sheets
  */
 var/global/list/datum/stack_recipe/glass_recipes = list ( \
-//	new/datum/stack_recipe("directional window", /obj/structure/window/unanchored, time = 0, on_floor = TRUE, window_checks = TRUE), \
+//	new/datum/stack_recipe("directional window", /obj/structure/window/unanchored, time = 0, on_floor = TRUE, window_checks = TRUE),
 	new/datum/stack_recipe("fulltile window", /obj/structure/window/fulltile/unanchored, 2, time = 0, on_floor = TRUE, window_checks = TRUE)
-)
+	)
 
 /obj/item/stack/sheet/glass
 	name = "glass"
@@ -34,7 +34,7 @@ var/global/list/datum/stack_recipe/glass_recipes = list ( \
 
 /obj/item/stack/sheet/glass/New(loc, amount)
 	recipes = glass_recipes
-	..()
+	return ..()
 
 /obj/item/stack/sheet/glass/attackby(obj/item/W, mob/user, params)
 	add_fingerprint(user)

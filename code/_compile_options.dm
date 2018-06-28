@@ -64,4 +64,4 @@
 #define SERVERTOOLS 0
 #endif
 
-#define ADDRESS_DONATE_DATA "http://fallout13.ru/payment/user-data.php" //Address of taking donates data. Like money count, packs list.
+#define ADDRESS_DONATE_DATA "" //Address of taking donates data. Like money count, packs list.

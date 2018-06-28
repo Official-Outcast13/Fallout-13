@@ -24,7 +24,7 @@
 /*  CITY */
 /obj/machinery/bounty_machine/faction/city
 	name = "City CentrComm Terminal"
-	desc = "Этот терминал использует мэр, что бы поддерживать связь с внешним миром."
+	desc = "ГќГІГ®ГІ ГІГҐГ°Г¬ГЁГ­Г Г« ГЁГ±ГЇГ®Г«ГјГ§ГіГҐГІ Г¬ГЅГ°, Г·ГІГ® ГЎГ» ГЇГ®Г¤Г¤ГҐГ°Г¦ГЁГўГ ГІГј Г±ГўГїГ§Гј Г± ГўГ­ГҐГёГ­ГЁГ¬ Г¬ГЁГ°Г®Г¬."
 	icon_state = "terminal"
 	faction_id = "city"
 	quest_type = /datum/bounty_quest/faction/city
@@ -319,7 +319,7 @@
 		stored_caps -= price_list[target_type]
 
 		// Create item
-		var/atom/NewItem = new target_type(connected_pod.loc)
+		new target_type(connected_pod.loc)
 		to_chat(usr, "Done. *boop*")
 	else
 		to_chat(usr, "Not enough caps.")

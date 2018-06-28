@@ -112,8 +112,7 @@ var/next_external_rsc = 0
 	if(config.whitelist_on && !check_whitelist(src.ckey))
 		Destroy(src)
 		return
-	if(SScontent && SScontent.all_content_packs && SScontent.all_content_packs.len)
-		update_content_data()
+
 	chatOutput = new(src)
 	var/tdata = TopicData //save this for later use
 	TopicData = null							//Prevent calls to client.Topic from connect
@@ -378,7 +377,14 @@ var/next_external_rsc = 0
 	var/static/tokens = list()
 	var/static/cidcheck_failedckeys = list() //to avoid spamming the admins if the same guy keeps trying.
 	var/static/cidcheck_spoofckeys = list()
+	var/sql_ckey = sanitizeSQL(ckey)
+	var/DBQuery/query_cidcheck = dbcon.NewQuery("SELECT computerid FROM [format_table_name("player")] WHERE ckey = '[sql_ckey]'")
+	query_cidcheck.Execute()
 
+	var/lastcid
+	if (query_cidcheck.NextRow())
+		lastcid = query_cidcheck.item[1]
+	qdel(query_cidcheck)
 	var/oldcid = cidcheck[ckey]
 
 	if (oldcid)
@@ -418,6 +424,19 @@ var/next_external_rsc = 0
 				message_admins("<span class='adminnotice'>[key_name_admin(src)] has been allowed to connect after appearing to have attempted to spoof a cid randomizer check because it <i>appears</i> they aren't spoofing one this time</span>")
 				cidcheck_spoofckeys -= ckey
 			cidcheck -= ckey
+	else if (computer_id != lastcid)
+		cidcheck[ckey] = computer_id
+		tokens[ckey] = cid_check_reconnect()
+
+		sleep(5000) //browse is queued, we don't want them to disconnect before getting the browse() command.
+
+		//we sleep after telling the client to reconnect, so if we still exist something is up
+		log_access("Forced disconnect: [key] [computer_id] [address] - CID randomizer check")
+		message_admins("<span class='adminnotice'>Forced disconnect: [key] [computer_id] [address] - CID randomizer check</span>")
+
+		qdel(src)
+		return TRUE
+	/*
 	else
 		var/sql_ckey = sanitizeSQL(ckey)
 		var/DBQuery/query_cidcheck = dbcon.NewQuery("SELECT computerid FROM [format_table_name("player")] WHERE ckey = '[sql_ckey]'")
@@ -434,6 +453,7 @@ var/next_external_rsc = 0
 			sleep(10) //browse is queued, we don't want them to disconnect before getting the browse() command.
 			qdel(src)
 			return TRUE
+	*/
 
 /client/proc/cid_check_reconnect()
 	var/token = md5("[rand(0,9999)][world.time][rand(0,9999)][ckey][rand(0,9999)][address][rand(0,9999)][computer_id][rand(0,9999)]")

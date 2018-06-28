@@ -61,12 +61,13 @@ mob/proc/update_vision_cone()
 //Updating fov position on screen depends from client.pixel_x/y values
 mob/proc/update_fov_position()
 
-mob/living/update_fov_position()
+mob/living/carbon/human/update_fov_position()
 	if(!client || !fov)
 		return
 	fov.screen_loc = "1:[-client.pixel_x],1:[-client.pixel_y]"
 
-mob/living/update_vision_cone()
+mob/living/carbon/human/update_vision_cone()
+	CHECK_TICK
 	if(src.client)
 		var/image/I = null
 		for(I in src.client.hidden_atoms)
@@ -113,7 +114,10 @@ mob/proc/hide_cone()
 	if(src.fov)
 		src.fov.alpha = 0
 
+/mob/living/carbon/human/Move(atom/newloc, direct)
+	. = ..()
+	for(var/mob/living/carbon/human/M in oview(src))
+		M.update_vision_cone()
 
-
-
+	update_vision_cone()
 
