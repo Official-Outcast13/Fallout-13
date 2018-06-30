@@ -140,6 +140,8 @@
 		adjacent_turfs_length++
 
 	for(var/t in adjacent_turfs)
+		if(!istype(t, /turf/open))
+			continue
 		var/turf/open/enemy_tile = t
 
 		if(fire_count > enemy_tile.current_cycle)
