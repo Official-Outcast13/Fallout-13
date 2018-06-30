@@ -13,6 +13,7 @@
 		selected_pack = "starter"
 
 	var/datum/content_pack/pack = SScontent.get_pack(selected_pack)
+	spack_data["name"] = "[(pack.name) ? pack.name : "No pack name"]"
 	spack_data["desc"] = "[(pack.desc) ? pack.desc : "No pack desc"]"
 	spack_data["price"] = "[(pack.price) ? pack.price : "No pack price"]"
 	spack_data["id"] = "[(pack.id) ? pack.id : "No pack id"]"
