@@ -355,7 +355,7 @@
 // SNIPER //
 
 /obj/item/weapon/gun/ballistic/automatic/sniper_rifle
-	name = "anti material rifle"
+	name = "anti materiel rifle"
 	desc = "A long ranged weapon that does significant damage. No, you can't quickscope."
 	icon_state = "sniper"
 	item_state = "sniper"
