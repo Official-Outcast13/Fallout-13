@@ -239,7 +239,18 @@
 
 
 /obj/item/clothing/head/helmet/f13/legrecruit
-	name = "recruit helmet"
+	name = "recruit legionary helmet"
+	desc = "A Legion recruit helmet, made of fine molerat leather. Or was it gecko leather? Come to think of it, that other guy from Legion had a helmet made of brahmin leather..."
+	icon_state = "legrecruit"
+	item_state = "legrecruit"
+	armor = list(melee = 35, bullet = 30, laser = 25, energy = 20, bomb = 25, bio = 20, rad = 25, fire = 25, acid = 25)
+	flags_inv = HIDEEARS|HIDEHAIR
+	put_on_delay = 10
+	strip_delay = 30
+	self_weight = 1
+
+/obj/item/clothing/head/helmet/f13/legvet
+	name = "veteran legionary helmet"
 	desc = "A Legion recruit helmet, made of fine molerat leather. Or was it gecko leather? Come to think of it, that other guy from Legion had a helmet made of brahmin leather..."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
@@ -250,7 +261,7 @@
 	self_weight = 1
 
 /obj/item/clothing/head/helmet/f13/legvexil
-	name = "vexillarius helmet"
+	name = "legion vexillarius helmet"
 	desc = "Vis gregis est lupus, ac vis lupi est grex.<br>100% of wolf."
 	icon_state = "legvexil"
 	item_state = "legvexil"
@@ -261,7 +272,7 @@
 	self_weight = 0.5
 
 /obj/item/clothing/head/helmet/f13/legdecan
-	name = "decanus helmet"
+	name = "legion decanus helmet"
 	desc = "A Legion decanus helmet, made of tanned leather and decorated with feathers."
 	icon_state = "legdecan"
 	item_state = "legdecan"
@@ -272,7 +283,7 @@
 	self_weight = 0.5
 
 /obj/item/clothing/head/helmet/f13/legdecan/alt //Variant with spiky feathers and pre-made goggles by Darkstalker_Darkfold.
-	name = "decanus helmet"
+	name = "legion decanus helmet"
 	desc = "A Legion decanus helmet, made of tanned leather and decorated with pieces of biker goggles.<br>This one has particularly spiky feathers..."
 	icon_state = "legdecanalt"
 	item_state = "legdecanalt"
@@ -280,7 +291,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/helmet/f13/legcenturion
-	name = "centurion helmet"
+	name = "legion centurion helmet"
 	desc = "A metal helmet commonly worn by the Centurion, a ranked officer of Caesar's Legion."
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
@@ -291,7 +302,7 @@
 	self_weight = 2
 
 /obj/item/clothing/head/helmet/f13/leglegate
-	name = "legate helmet"
+	name = "legion legate helmet"
 	desc = "A metal helmet destined to adorn the head of the Legate, a ranked officer of Caesar's Legion."
 	icon_state = "leglegate"
 	item_state = "leglegate"
@@ -420,7 +431,7 @@
 		A.UpdateButtonIcon()
 
 /obj/item/clothing/head/helmet/power_armor/shocktrooper
-	name = "shocktrooper power helmet"
+	name = "marauder power helmet"
 	desc = "A 'black devil' power armor helmet used exclusively by Enclave military forces, developed after the Great War and the destruction of the Enclave Oil Rig in 2241.<br>You can't lie, it looks pretty badass."
 	icon_state = "shocktrooper"
 	item_state = "shocktrooper"
@@ -628,12 +639,26 @@
 	self_weight = 5
 
 /obj/item/clothing/head/helmet/power_armor/ncr
-	name = "NCR power helmet"
+	name = "NCR salvaged power helmet"
 	desc = "A pre-War power armor helmet, recovered and maintained by NCR engineers. It has a rack of cooling fans but only excessive padding for neck support."
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = list(melee = 40, bullet = 35, laser = 20, energy = 20, bomb = 20, bio = 20, rad = 30, fire = 30, acid = 30)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	put_on_delay = 50
+	strip_delay = 100
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	self_weight = 5
+
+/obj/item/clothing/head/helmet/power_armor/ncradv
+	name = "NCR scorched sierra power helmet"
+	desc = "A repurposed T-45b power armor helmet that has been streamlined by NCR Engineers, it features a rack of cooling fans and hydraulic actuators for neck support. It appears to have a scorched in layer of soot."
+	icon_state = "t45bhelmet"
+	item_state = "t45bhelmet"
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
+	armor = list(melee = 85, bullet = 85, laser = 85, energy = 85, bomb = 60, bio = 100, rad = 75, fire = 70, acid = 70)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	put_on_delay = 50
 	strip_delay = 100

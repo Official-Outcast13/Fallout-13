@@ -380,7 +380,7 @@
 	item_state = "tdgreen"
 
 /obj/item/clothing/suit/johncoat
-	name = "Military trench coat"
+	name = "military trench coat"
 	desc = "An olive green trenchcoat with mild wear from traveling the wastes, significantly more stylish than it's sister model."
 	icon_state = "johncoat"
 	item_state = "johncoat"
@@ -388,7 +388,7 @@
 	allowed = list(/obj/item/weapon/pen,/obj/item/weapon/paper,/obj/item/weapon/stamp,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/item/weapon/melee,/obj/item/weapon/storage/box/matches,/obj/item/weapon/lighter,/obj/item/clothing/mask/cigarette,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/device/flashlight,/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 
 /obj/item/clothing/suit/armor/igonchest
-	name = "Coat of Plates"
+	name = "coat of plates"
 	desc = "Covering the entirity of the owner's armor, resistant and durable, coming from the 10th century."
 	icon_state = "igonchest"
 	w_class = WEIGHT_CLASS_BULKY
@@ -415,7 +415,7 @@
 	resistance_flags = ACID_PROOF
 
 /obj/item/clothing/suit/bio_suit/sciencesuit
-	name = "All-Purpose Science Suit"
+	name = "all purpose science suit"
 	desc = "The All-Purpose Science Suit is an environmentally sealed suit similar to that of a hazmat suit. While it does not protect against radiation as well as it, it provides slightly more protection against physical and chemical hazards. Perfect for scientific expeditions!."
 	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/ballistic,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs,/obj/item/device/flashlight/seclite,/obj/item/weapon/melee/classic_baton/telescopic,/obj/item/weapon/kitchen/knife/combat,/obj/item/weapon/tank/internals/emergency_oxygen)
 	icon_state = "sciencesuit"
@@ -425,7 +425,7 @@
 /* Stealth Suits */
 
 /obj/item/clothing/suit/stealth/stealthsuit
-	name = "Chinese Stealth Suit"
+	name = "chinese stealth armor"
 	desc = "A form-fitting armor suit complete with an active stealth field that can be triggered at the press of a button."
 	icon_state = "stealthsuit"
 	item_state = "stealthsuit"
@@ -492,7 +492,7 @@
 		animate(user,alpha = Clamp(255 - charge,0,255),time = 5)
 
 /obj/item/clothing/suit/armor/ranger
-	name = "Veteran Ranger Trenchcoat"
+	name = "veteran ranger trenchcoat"
 	desc = "An armored leather trenchcoat - the traditional uniform of the Desert Rangers."
 	icon_state = "vet_ranger"
 	item_state = "vet_ranger"
@@ -504,7 +504,7 @@
 	allowed = list(/obj/item/weapon/gun/ballistic/revolver)
 
 /obj/item/clothing/suit/armor/ranger/old
-	name = "Worn Veteran Ranger Combat Armor"
+	name = "worn veteran ranger combat armor"
 	desc = "A unique armor, that has been in countless battles and caused much bloodshed."
 	icon_state = "old_ranger"
 	item_state = "old_ranger"
@@ -512,7 +512,7 @@
 	self_weight = 2
 
 /obj/item/clothing/suit/armor/ranger/eliteriotgear
-	name = "Elite Riot Gear"
+	name = "elite riot gear"
 	desc = "An armored leather trenchcoat that has been heavily modified for the purposes of advanced riot control. It has been reinforced with shoulder plates and knee pads as well as features an enhanced gas filtration system."
 	icon_state = "elite_riot_gear"
 	item_state = "elite_riot_gear"
@@ -523,7 +523,7 @@
 	self_weight = 2
 
 /obj/item/clothing/suit/armor/sullyvest
-	name = "Militia Vest"
+	name = "militia vest"
 	desc = "An improved ballistic vest, crafted in Flagstaff"
 	icon_state = "sullyvest"
 	item_state = "sullyvest"
@@ -532,7 +532,7 @@
 	put_on_delay = 50
 
 /obj/item/clothing/suit/bio_suit/advancedsciencesuit
-	name = "Advanced Science Suit"
+	name = "advanced science suit"
 	desc = "A modified All-Purpose Science Suit engineered by an Enclave scientist. It is crafted of lightweight polymers similar to that of the Advanced Power Armor, but lacks the weight and servos of a true suit of power armor has. Like the Science Suit, it is still environmentally sealed for maximum protection from the elements of the wasteland."
 	icon_state = "advscience"
 	item_state = "advscience"
