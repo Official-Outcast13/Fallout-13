@@ -355,7 +355,7 @@
 // SNIPER //
 
 /obj/item/weapon/gun/ballistic/automatic/sniper_rifle
-	name = "sniper rifle"
+	name = "anti materiel rifle"
 	desc = "A long ranged weapon that does significant damage. No, you can't quickscope."
 	icon_state = "sniper"
 	item_state = "sniper"
@@ -382,7 +382,7 @@
 
 
 /obj/item/weapon/gun/ballistic/automatic/sniper_rifle/syndicate
-	name = "syndicate sniper rifle"
+	name = "anti material rifle"
 	desc = "An illegally modified .50 cal sniper rifle with supression compatibility. Quickscoping still doesn't work."
 	pin = /obj/item/device/firing_pin/implant/pindicate
 	origin_tech = "combat=7;syndicate=6"
