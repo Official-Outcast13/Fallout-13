@@ -662,6 +662,21 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	self_weight = 0.85
 
+/obj/item/weapon/gun/ballistic/automatic/pistol/ncr1911
+	name = "M1911 Custom"
+	icon_state = "ncr1911"
+	desc = "A reinforced Colt 1911 built to withstand the conditions of intense combat. This one appears to have wooden grips shaped to the form of someones hand and appears very worn."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	item_state = "mike1911"
+	origin_tech = "combat=2;materials=2"
+	mag_type = /obj/item/ammo_box/magazine/m45
+	can_suppress = 0
+	fire_sound = 'sound/f13weapons/coltfire.ogg'
+	burst_size = 1
+	zoomable = FALSE
+	w_class = WEIGHT_CLASS_NORMAL
+	self_weight = 0.85
+
 /obj/item/weapon/gun/ballistic/automatic/pistol/shiningdarkness
 	name = "A Light Shining in Darkness"
 	icon_state = "shiningdarkness"
