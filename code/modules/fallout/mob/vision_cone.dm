@@ -49,8 +49,17 @@ mob/living/InCone(mob/center = usr, dir = NORTH)
 		else
 			return .
 */
+// Commenting this - Sansaur
+/*
 proc/cone(atom/center = usr, dir = NORTH, list/list = oview(center))
 	for(var/atom/A in list)
+		if(!A.InCone(center, dir))
+			list -= A
+	return list
+*/
+// And from now on, in "cone" we will only hide LIVING MOBS
+proc/cone(atom/center = usr, dir = NORTH, list/list = oview(center))
+	for(var/mob/living/A in list)
 		if(!A.InCone(center, dir))
 			list -= A
 	return list
@@ -67,7 +76,8 @@ mob/living/carbon/human/update_fov_position()
 	fov.screen_loc = "1:[-client.pixel_x],1:[-client.pixel_y]"
 
 mob/living/carbon/human/update_vision_cone()
-	CHECK_TICK
+	// This did the opposite of what it was supposed to - Sansaur
+	//CHECK_TICK
 	if(src.client)
 		var/image/I = null
 		for(I in src.client.hidden_atoms)
@@ -121,3 +131,21 @@ mob/proc/hide_cone()
 
 	update_vision_cone()
 
+// RECALLS
+
+/mob/living/carbon/human/westface()
+	. = ..()
+	if(.)
+		update_vision_cone()
+/mob/living/carbon/human/eastface()
+	. = ..()
+	if(.)
+		update_vision_cone()
+/mob/living/carbon/human/northface()
+	. = ..()
+	if(.)
+		update_vision_cone()
+/mob/living/carbon/human/southface()
+	. = ..()
+	if(.)
+		update_vision_cone()

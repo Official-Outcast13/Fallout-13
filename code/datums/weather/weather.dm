@@ -94,6 +94,8 @@
 	update_areas()
 	for(var/V in player_list)
 		var/mob/M = V
+		if(!M)
+			continue
 		if(M.z == target_z)
 			if(end_message)
 				to_chat(M, end_message)
