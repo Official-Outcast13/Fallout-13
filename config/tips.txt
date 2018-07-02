@@ -11,3 +11,14 @@ You can grab someone by clicking on them with the grab intent, then upgrade the 
 Holding alt and left clicking a tile will allow you to see its contents in the top right window pane, which is much faster than right clicking.
 The resist button will allow you to resist out of handcuffs, being buckled to a chair or bed, out of locked lockers and more. Whenever you're stuck, try resisting!
 You can move an item out of the way by dragging it and then clicking on an adjacent tile with an empty hand.
+Crates can be booby-trapped by adding wire, shocking anyone who tries to open them.
+You can toggle the safety of your favorite shotgun by holding alt and clicking on it in your hotbar.
+Shift clicking on a person with a exposed face will show their faction affiliation at the bottom of the examine text.
+The Legate's armor has almost the same damage resistance as power armor. Be weary.
+On most advanced armor, the helmet has more damage resistance than the actual armor, sometimes it is useful to aim for the limbs.
+Armor piercing rounds will ignore power armor.
+Dynamite requires you to use a ignition tool on it to activate it. ( Torch / Zippo / Lighter / Welder )
+The wasteland has many hidden surprises, be sure to look closely when on your next scouting run.
+Recruit > Trooper > Heavy Trooper >  Sergeant > Sergeant Major > Scout Ranger > Ranger > Veteran Ranger > Lieutenant > Captain > Major > Colonel > General > President
+Slave > Recruit > Veteran Legionnaire - Vexillarius > Decanus > Centurion > Legate > Caesar
+just the tip (rare tip)
