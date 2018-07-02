@@ -374,6 +374,13 @@
 	armor = list(melee = 65, bullet = 65, laser = 65, energy = 65, bomb = 50, bio =100, rad = 40, fire = 50, acid = 50)
 	self_weight = 30
 
+/obj/item/clothing/suit/armor/f13/power_armor/ncr
+	name = "NCR scorched sierra power armor"
+	desc = "A repurposed set of T-45b power armor that has been streamlined by NCR Engineers, it features a pack of cooling fans and hydraulic actuators for back support. A bears head is mounted onto the shoulder and several gold pins are molded to the armor. It appears to have a scorched in layer of soot."
+	icon_state = "t45bpowerarmor"
+	item_state = "t45bpowerarmor"
+	armor = list(melee = 85, bullet = 85, laser = 85, energy = 85, bomb = 60, bio = 100, rad = 75, fire = 70, acid = 70)
+
 /obj/item/clothing/suit/armor/f13/power_armor/t51b
 	name = "T-51b power armor"
 	desc = "A mass-produced pinnacle of pre-War engineering.<br>Developed in the laboratories of the West Tek Research Facility, the T-51b was deployed at the end of the Anchorage Reclamation, and by January 2077, the armor had become standard issue for American soldiers in the Army's Mechanized Cavalry Regiments."
