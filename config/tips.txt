@@ -1,5 +1,13 @@
 To crack safes in wasteland, use a stethoscope on it and rotate it to the right until you hear a click, then to the left, then to the right. It must be a click however.
 To use a hand held radio without having to turn the microphone on, have it anywhere on your body and use the ";" key to speak into it, hands free!
 You can chop down dead trees with an axe, and then further process the logs you get into planks to build wooden structures and items.
-Watch out for clock cultists.
-You mouth dry.
+You can drag other players onto yourself to open the strip menu, letting you remove their equipment or force them to wear something. Note that exosuits or helmets will block your access to the clothing beneath them, and that certain items take longer to strip or put on than others.
+Clicking on a windoor rather then bumping into it will keep it open, you can click it again to close it.
+You can change the control scheme by pressing tab. One is WASD, the other is the arrow keys. Keep in mind that hotkeys are also changed with this.
+All vending machines can be hacked to obtain some contraband items from them, and some can be fed with coins to gain access to premium items.
+Glass shards can be welded to make glass, and metal rods can be welded to make metal. Ores can be welded too, but this takes a lot of fuel.
+If you need to drag multiple people either to safety or to space, bring a locker over and stuff them all in before hauling them off.
+You can grab someone by clicking on them with the grab intent, then upgrade the grab by clicking on the grab button in your active hand. An aggressive grab will allow you to place someone on a table by clicking on it, or throw them by toggling on throwing.
+Holding alt and left clicking a tile will allow you to see its contents in the top right window pane, which is much faster than right clicking.
+The resist button will allow you to resist out of handcuffs, being buckled to a chair or bed, out of locked lockers and more. Whenever you're stuck, try resisting!
+You can move an item out of the way by dragging it and then clicking on an adjacent tile with an empty hand.
