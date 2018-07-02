@@ -65,13 +65,11 @@
 // Will force an update without checking if it's actually needed.
 /datum/sunlight_source/proc/force_update()
 	force_update = 1
-
 	EFFECT_UPDATE
 
 // Will cause the light source to recalculate turfs that were removed or added to visibility only.
 /datum/sunlight_source/proc/vis_update()
 	vis_update = 1
-
 	EFFECT_UPDATE
 
 // Will check if we actually need to update, and update any variables that may need to be updated.
@@ -189,7 +187,8 @@
 	L = affecting_turfs - turfs // Now-gone turfs, remove us from the affecting lights.
 	affecting_turfs -= L
 	for (var/turf/T in L)
-		T.sun_affecting_lights -= src
+		if(T.sun_affecting_lights)
+			T.sun_affecting_lights -= src
 
 	for (var/datum/sunlighting_corner/C in corners - effect_str) // New corners
 		C.affecting += src
