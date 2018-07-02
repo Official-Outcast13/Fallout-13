@@ -151,45 +151,55 @@
 	self_weight = 15
 
 /obj/item/clothing/suit/armor/f13/legrecruit
-	name = "recruit armor"
+	name = "recruit legionary armor"
 	desc = "Legion recruit armor is common light armor, supplied to recruit legionaries and to recruit decanus units.<br>Like most of the Caesar's Legion armor, it is made of repurposed sports equipment, consisting of a football player's protective shoulder and chest pads reinforced with additional leather padding and worn over a baseball catcher's vest."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 60, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 50, rad = 50, fire = 50, acid = 50)
+	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 60, bio = 50, rad = 50, fire = 50, acid = 50)
+	put_on_delay = 60
+	strip_delay = 60
+	self_weight = 3
+
+/obj/item/clothing/suit/armor/f13/legvet
+	name = "veteran legionary armor"
+	desc = "Legion veteran armor is common light armor, supplied to veteran legionaries"
+	item_state = "legrecruit"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET
+	armor = list(melee = 45, bullet = 45, laser = 50, energy = 50, bomb = 60, bio = 50, rad = 50, fire = 50, acid = 50)
 	put_on_delay = 60
 	strip_delay = 60
 	self_weight = 3
 
 /obj/item/clothing/suit/armor/f13/legvexil
-	name = "vexillarius armor"
+	name = "legion vexillarius armor"
 	desc = "The armor appears to be based on a suit of Caesar's Legion veteran armor, with the addition of circular metal plates attached to the torso, as well as a banner displaying the emblem of the Legion worn on the back."
 	icon_state = "legvexil"
 	item_state = "legvexil"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 50, bullet = 40, laser = 30, energy = 40, bomb = 40, bio = 30, rad = 30, fire = 30, acid = 30)
+	armor = list(melee = 50, bullet = 50, laser = 30, energy = 40, bomb = 40, bio = 30, rad = 30, fire = 30, acid = 30)
 	put_on_delay = 60
 	strip_delay = 60
 	self_weight = 5
 
 /obj/item/clothing/suit/armor/f13/legcenturion
-	name = "centurion armor"
+	name = "legion centurion armor"
 	desc = "The Legion centurion armor is by far the strongest suit of armor available to Caesar's Legion soldiers.<br>The armor is composed from various pieces of armor taken from that of the wearer's defeated opponents in combat."
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 80, bullet = 75, laser = 75, energy = 75, bomb = 70, bio = 70, rad = 80, fire = 80, acid = 80)
+	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 70, bio = 70, rad = 80, fire = 80, acid = 80)
 	put_on_delay = 60
 	strip_delay = 60
 	self_weight = 10
 
 /obj/item/clothing/suit/armor/f13/leglegate
-	name = "legate armor"
+	name = "legion legate armor"
 	desc = "The armor appears to be a full suit of heavy-gauge steel and offers full body protection.<br>The armor itself bears numerous battle scars.<br>The Legate's suit appears originally crafted, in contrast to other Legion armor which consists of repurposed pre-War sports equipment."
 	icon_state = "leglegate"
 	item_state = "leglegate"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 90, bullet = 90, laser = 80, energy = 80, bomb = 75, bio = 75, rad = 90, fire = 90, acid = 90)
+	armor = list(melee = 70, bullet = 70, laser = 70, energy = 70, bomb = 75, bio = 75, rad = 90, fire = 90, acid = 90)
 	put_on_delay = 60
 	strip_delay = 60
 	resistance_flags = FIRE_PROOF
@@ -225,7 +235,7 @@
 	icon_state = "ncr_armor1"
 	item_state = "ncr_armor1"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 25, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 20, fire = 10, acid = 20)
+	armor = list(melee = 35, bullet = 50, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 20, fire = 10, acid = 20)
 	put_on_delay = 50
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
@@ -331,7 +341,7 @@
 	strip_delay = 100
 	self_weight = 35
 	slowdown = 1
-	armor = list(melee = 60, bullet = 45, laser = 40, energy = 10, bomb = 15, bio = 40, rad = 20, fire = 40, acid = 30)
+	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 15, bio = 40, rad = 20, fire = 40, acid = 30)
 
 /obj/item/clothing/suit/armor/f13/power_armor
 	w_class = WEIGHT_CLASS_HUGE
@@ -361,7 +371,7 @@
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
-	armor = list(melee = 55, bullet = 50, laser = 40, energy = 30, bomb = 50, bio =100, rad = 40, fire = 50, acid = 50)
+	armor = list(melee = 65, bullet = 65, laser = 65, energy = 65, bomb = 50, bio =100, rad = 40, fire = 50, acid = 50)
 	self_weight = 30
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b
@@ -369,7 +379,7 @@
 	desc = "A mass-produced pinnacle of pre-War engineering.<br>Developed in the laboratories of the West Tek Research Facility, the T-51b was deployed at the end of the Anchorage Reclamation, and by January 2077, the armor had become standard issue for American soldiers in the Army's Mechanized Cavalry Regiments."
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
-	armor = list(melee = 60, bullet = 60, laser = 50, energy = 40, bomb = 60, bio = 100, rad = 60, fire = 60, acid = 60)
+	armor = list(melee = 75, bullet = 75, laser = 75, energy = 75, bomb = 60, bio = 100, rad = 60, fire = 60, acid = 60)
 	self_weight = 25
 
 /obj/item/clothing/suit/armor/f13/power_armor/t60
@@ -377,7 +387,7 @@
 	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b power armor as the pinnacle of powered armor technology in the U.S. military arsenal.<br>Incorporating design elements from the earlier T-45, the T-60 was deployed domestically among U.S. Army units just prior to the dropping of the bombs."
 	icon_state = "t60powerarmor"
 	item_state = "t60powerarmor"
-	armor = list(melee = 75, bullet = 70, laser = 60, energy = 50, bomb = 60, bio = 100, rad = 75, fire = 70, acid = 70)
+	armor = list(melee = 85, bullet = 85, laser = 85, energy = 85, bomb = 60, bio = 100, rad = 75, fire = 70, acid = 70)
 	self_weight = 25
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
@@ -385,7 +395,7 @@
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advanced"
 	item_state = "advanced"
-	armor = list(melee = 70, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 60, fire = 60, acid = 60)
+	armor = list(melee = 65, bullet = 65, laser = 65, energy = 65, bomb = 50, bio =100, rad = 40, fire = 50, acid = 50)
 	self_weight = 20
 
 /obj/item/clothing/suit/armor/f13/power_armor/tesla
@@ -393,7 +403,7 @@
 	desc = "A variant of the Enclave's advanced power armor Mk I, jury-rigged with a Tesla device that is capable of dispersing a large percentage of the damage done by directed-energy attacks.<br>As it's made of complex composite materials designed to block most of energy damage - it's notably weaker against kinetic impacts."
 	icon_state = "tesla"
 	item_state = "tesla"
-	armor = list(melee = 60, bullet = 40, laser = 85, energy = 85, bomb = 40, bio = 100, rad = 80, fire = 80, acid = 80)
+	armor = list(melee = 75, bullet = 75, laser = 75, energy = 75, bomb = 60, bio = 100, rad = 60, fire = 60, acid = 60)
 	self_weight = 15
 
 /obj/item/clothing/suit/armor/f13/power_armor/superadvanced
@@ -401,15 +411,15 @@
 	desc = "An improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "superadvanced"
 	item_state = "superadvanced"
-	armor = list(melee = 80, bullet = 80, laser = 70, energy = 65, bomb = 70, bio = 100, rad = 80, fire = 80, acid = 80)
+	armor = list(melee = 75, bullet = 75, laser = 75, energy = 75, bomb = 60, bio = 100, rad = 60, fire = 60, acid = 60)
 	self_weight = 13
 
 /obj/item/clothing/suit/armor/f13/power_armor/shocktrooper
-	name = "shocktrooper power armor"
+	name = "marauder power armor"
 	desc = "A \"Black Devil\" power armor - a high-end model used exclusively by the Enclave's Department of the Army and developed after the Great War and the destruction of the Enclave Oil Rig in 2241.<br>It is composed entirely of lightweight composites rather than the usual combination of metal and composite plates found on the previous designations of advanced power armor, the mark I and II."
 	icon_state = "shocktrooper"
 	item_state = "shocktrooper"
-	armor = list(melee = 80, bullet = 80, laser = 70, energy = 70, bomb = 80, bio = 100, rad = 90, fire = 80, acid = 80)
+	armor = list(melee = 85, bullet = 85, laser = 85, energy = 85, bomb = 60, bio = 100, rad = 75, fire = 70, acid = 70)
 	self_weight = 12
 
 /obj/item/clothing/suit/armor/f13/power_armor/badmin
