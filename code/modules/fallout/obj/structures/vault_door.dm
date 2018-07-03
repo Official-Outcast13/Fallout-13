@@ -71,6 +71,15 @@
 		return
 	close()
 
+/obj/structure/vault_door/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
+	if(damage_amount < 100)
+		// For now we'll make it so you need something REALLY STRONG to break the damned vault door. - Sansaur
+		// We'll think of newer ways to actually break the vault door, something that makes more sense than just "big damage numbers"
+		visible_message("<span class='warning'>[src] looks unscratched</span>", null, null, COMBAT_MESSAGE_RANGE)
+		return
+	else
+		..()
+
 //Lever
 
 /obj/machinery/doorButtons/vaultButton
@@ -81,14 +90,26 @@
 	anchored = 1
 	density = 1
 	var/id = 1
+	// saving the vaultDOOR it doesn't run a fucking "foreach in world" every time someone presses a button.
+	var/obj/structure/vault_door/vaultDOOR
+
+/obj/machinery/doorButtons/vaultButton/New()
+	. = ..()
+	search_my_vault_door()
+
+/obj/machinery/doorButtons/vaultButton/proc/search_my_vault_door()
+	for(var/obj/structure/vault_door/door in world)
+		if(door.id == id)
+			vaultDOOR = door
 
 /obj/machinery/doorButtons/vaultButton/proc/toggle_door()
 	var/opened
 	icon_state = "lever0"
-	for(var/obj/structure/vault_door/door in world)
-		if(door.id == id)
-			door.toogle()
-			opened = !door.density
+	if(!vaultDOOR)
+		search_my_vault_door()
+
+	vaultDOOR.toogle()
+	opened = !vaultDOOR.density
 	spawn(50)
 		if(opened)
 			icon_state = "lever2"
@@ -98,12 +119,42 @@
 /obj/machinery/doorButtons/vaultButton/attackby(obj/item/weapon/W, mob/user, params)
 	if(user.a_intent == INTENT_HARM)
 		return ..()
+	if(istype(W, /obj/item/weapon/card/id/vault))
+		var/obj/item/weapon/card/id/vault/MYID = W
+		if(!MYID.registered_name)
+			to_chat(user, "<span class='warning'>The access panel rejects [MYID] identification </span>")
+		else
+			toggle_door()
+			return
 	attack_hand(user)
 
-/obj/machinery/doorButtons/vaultButton/attack_hand(mob/user)
+/obj/machinery/doorButtons/vaultButton/attack_hand(mob/user, allowed)
 	..()
 	if(iscarbon(user))
 		var/mob/living/carbon/C = user
 		if(C.handcuffed)
 			return
-	toggle_door()
+		for(var/obj/item/G in C.contents)
+			if(istype(G, /obj/item/weapon/card/id/vault))
+				var/obj/item/weapon/card/id/vault/MYID = G
+				if(!MYID.registered_name)
+					to_chat(user, "<span class='warning'>The access panel rejects [MYID] identification </span>")
+					continue
+				else
+					toggle_door()
+					return
+			if(istype(G, /obj/item/device/pda))
+				var/obj/item/device/pda/MYPDA = G
+				var/obj/item/weapon/card/id/vault/MYID = MYPDA.id
+				if(!MYID)
+					to_chat(user, "<span class='warning'>[MYPDA] doesn't have a valid ID</span>")
+					continue
+				if(!MYID.registered_name)
+					to_chat(user, "<span class='warning'>The access panel rejects [MYID] identification </span>")
+					continue
+				else
+					toggle_door()
+					return
+
+	to_chat(user, "<span class='warning'>[src] requires for an identification which you currently don't have on yourself</span>")
+
