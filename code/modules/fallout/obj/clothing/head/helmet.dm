@@ -226,7 +226,7 @@
 	darkness_view = 8
 
 /obj/item/clothing/head/helmet/f13/legrecruit
-	name = "recruit helmet"
+	name = "recruit legionary helmet"
 	desc = "A Legion recruit helmet, made of fine molerat leather. Or was it gecko leather? Come to think of it, that other guy from Legion had a helmet made of brahmin leather..."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
@@ -236,8 +236,19 @@
 	strip_delay = 30
 	self_weight = 1
 
+/obj/item/clothing/head/helmet/f13/legprime
+	name = "prime legionary helmet"
+	desc = "It appears to be a pitcher helmet with a red line burned into it. Vaguely smells of blood and sweat."
+	icon_state = "legprime"
+	item_state = "legprime"
+	armor = list(melee = 55, bullet = 30, laser = 25, energy = 20, bomb = 25, bio = 20, rad = 25, fire = 25, acid = 25)
+	flags_inv = HIDEEARS|HIDEHAIR
+	put_on_delay = 10
+	strip_delay = 30
+	self_weight = 1
+
 /obj/item/clothing/head/helmet/f13/legvexil
-	name = "vexillarius helmet"
+	name = "legion vexillarius helmet"
 	desc = "Vis gregis est lupus, ac vis lupi est grex.<br>100% of wolf."
 	icon_state = "legvexil"
 	item_state = "legvexil"
@@ -248,7 +259,7 @@
 	self_weight = 0.5
 
 /obj/item/clothing/head/helmet/f13/legdecan
-	name = "decanus helmet"
+	name = "legion decanus helmet"
 	desc = "A Legion decanus helmet, made of tanned leather and decorated with feathers."
 	icon_state = "legdecan"
 	item_state = "legdecan"
@@ -259,7 +270,7 @@
 	self_weight = 0.5
 
 /obj/item/clothing/head/helmet/f13/legdecan/alt //Variant with spiky feathers and pre-made goggles by Darkstalker_Darkfold.
-	name = "decanus helmet"
+	name = "legion decanus helmet"
 	desc = "A Legion decanus helmet, made of tanned leather and decorated with pieces of biker goggles.<br>This one has particularly spiky feathers..."
 	icon_state = "legdecanalt"
 	item_state = "legdecanalt"
@@ -267,7 +278,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/helmet/f13/legcenturion
-	name = "centurion helmet"
+	name = "legion centurion helmet"
 	desc = "A metal helmet commonly worn by the Centurion, a ranked officer of Caesar's Legion."
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
@@ -278,7 +289,7 @@
 	self_weight = 2
 
 /obj/item/clothing/head/helmet/f13/leglegate
-	name = "legate helmet"
+	name = "legion legatus helmet"
 	desc = "A metal helmet destined to adorn the head of the Legate, a ranked officer of Caesar's Legion."
 	icon_state = "leglegate"
 	item_state = "leglegate"
