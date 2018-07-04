@@ -626,6 +626,9 @@ var/next_mob_id = 0
 		return 0
 	if(restrained())
 		return 0
+	// Apparently clicking also needs facing.
+	//if(dir_change_lock)
+	//	return 0
 	return 1
 
 

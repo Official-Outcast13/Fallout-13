@@ -77,6 +77,8 @@
 	if(mob)
 		mob.swap_hand()
 
+
+
 /client/verb/attack_self()
 	set hidden = 1
 	if(mob)
@@ -435,3 +437,32 @@
 	if(hud_used && hud_used.static_inventory)
 		for(var/obj/screen/mov_intent/selector in hud_used.static_inventory)
 			selector.toggle(src)
+
+
+// Locking direction where you're looking - Sansaur
+
+/mob/proc/dir_lock()
+	set category = "IC"
+	set name = "Lock dir"
+
+	src.dir_change_lock = !src.dir_change_lock
+	to_chat(src, "<span class='info'>[(src.dir_change_lock) ? "You'll now keep looking straight" : "You now may turn around"]</span>")
+	if(src.client)
+		var/obj/screen/lockDir/M
+		for(M in src.client.screen)
+			if(src.dir_change_lock)
+				M.icon_state = "lockDir_active"
+			else
+				M.icon_state = "lockDir"
+
+
+/mob/living/setDir(newdir)
+	// SRSLY? - Sansaur
+	//if(!dir_change_lock)
+	..()
+
+/mob/living/Move(atom/newloc, direct)
+	if(dir_change_lock)
+		..(newloc, src.dir)
+		return
+	..()
