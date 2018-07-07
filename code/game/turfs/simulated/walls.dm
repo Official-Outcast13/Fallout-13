@@ -85,8 +85,16 @@
 
 /turf/closed/wall/bullet_act(var/obj/item/projectile/Proj)
 	..()
-	if(Proj.damage > hardness/4)
-		take_damage(Proj.damage/20)
+	if(Proj.break_attack >= break_resist)
+		if(Proj.damage >= hardness/4)
+			// We have to make this so it deals more damage the higher the projectile damage is
+			// A grenade launcher deals 60 damage, it should deal a lot of said damage, while a bullet that deals 20-30 should deal less.
+			// The stronger the breaking power in comparison to the wall's resilience, the better.
+			var/divisor = 100 - (Proj.damage + (Proj.break_attack-break_resist))
+			(divisor > 0) ? take_damage(Proj.damage/divisor) : take_damage(Proj.damage)
+	else
+		visible_message("<span class='warning'>[Proj] bounces off the wall!</span>", null, null, 7)
+		// Sound effect of a bullet bounce? - Sansaur
 
 /turf/closed/wall/mech_melee_attack(obj/mecha/M)
 	M.do_attack_animation(src)

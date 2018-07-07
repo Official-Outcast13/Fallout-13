@@ -248,9 +248,9 @@
 	icon_state = "sledgehammer0"
 	flags = CONDUCT
 	slot_flags = SLOT_BACK
-	force = 5
-	force_unwielded = 5
-	force_wielded = 20
+	force = 10
+	force_unwielded = 10
+	force_wielded = 30
 	throwforce = 25
 	throw_range = 7
 	w_class = 4
@@ -264,9 +264,9 @@
 	icon_state = "largesledgehammer0"
 	flags = CONDUCT
 	slot_flags = SLOT_BACK
-	force = 5
+	force = 10
 	force_unwielded = 10
-	force_wielded = 25
+	force_wielded = 35
 	throwforce = 25
 	throw_range = 7
 	w_class = 4
@@ -280,7 +280,7 @@
 	icon_state = "supersledgehammer0"
 	flags = CONDUCT
 	slot_flags = SLOT_BACK
-	force = 5
+	force = 10
 	force_unwielded = 10
 	force_wielded = 45
 	throwforce = 30

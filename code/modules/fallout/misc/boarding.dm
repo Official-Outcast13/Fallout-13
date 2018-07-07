@@ -38,6 +38,9 @@
 	return
 
 /obj/structure/barricade/wooden/planks/proc/checkplanks()
+	if(planks > maxplanks)
+		planks = maxplanks
+	
 	obj_integrity = planks*30 //Each board adds 30 health
 	icon_state = "board-[planks]"
 	if(obj_integrity <= 0)
