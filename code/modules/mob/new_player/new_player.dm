@@ -321,6 +321,18 @@
 		return 0
 	return 1
 
+// This list will filter factions with spawn areas. - Sansaur
+// We should relocate this to a visible location, for now it stays here.
+var/list/biased_spawn_assoc = list(
+	"bs" = 	/area/f13/brotherhood,
+	"enclave" = /area/f13/enclave,
+	"none" = /area/f13/wasteland,
+	"city" = /area/f13/city,
+	"raiders" = /area/f13/raiders,
+	"ncr" = /area/f13/ncr,
+	"legion" = /area/f13/legion,
+	"vault" = /area/f13/vault
+)
 
 /mob/new_player/proc/AttemptLateSpawn(rank)
 	if(!IsJobAvailable(rank))
@@ -338,7 +350,29 @@
 	if(iscyborg(equip))	//Borgs get borged in the equip, so we need to make sure we handle the new mob.
 		character = equip
 
-	var/D = pick(latejoin)
+	var/D = null
+	var/list/L = MAP_FACTIONS_LIST
+	var/list/turf/listPossibleFactionSpawns = list()
+
+	for(var/f in character.faction)
+		if(L.Find(f) && f != "none")
+			for(var/turf/LOCATION in latejoin)
+				// Area of the turf must be the faction's area, and it has to not have a human on it at the time of spawn.
+				if(LOCATION.loc.type == biased_spawn_assoc[f] && !(locate(/mob/living/carbon/human) in LOCATION))
+					listPossibleFactionSpawns.Add(LOCATION)
+
+	if(listPossibleFactionSpawns.len >= 1)
+		D = pick(listPossibleFactionSpawns)
+	
+	// If there's no faction latespawn, go through "none" latespawn
+	if(!D)
+		for(var/turf/LOCATION in latejoin)
+			if(!(locate(/mob/living/carbon/human) in LOCATION))
+				D = LOCATION
+				break
+	// If there still isn't any viable spawns just go "fuck it" and spawn him in a random space in the wastes
+	if(!D)
+		D = locate(/mob/living/carbon/human) in biased_spawn_assoc["none"]
 	if(!D)
 		for(var/turf/T in get_area_turfs(/area/shuttle/arrival))
 			if(!T.density)
