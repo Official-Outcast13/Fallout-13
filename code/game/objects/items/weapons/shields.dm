@@ -52,6 +52,23 @@
 	resistance_flags = FLAMMABLE
 	block_chance = 30
 
+/obj/item/weapon/shield/riot/legion
+	name = "legion shield"
+	desc = "A heavy oak shield that appears to have been reinforced with metal straps and bound together with a heavy leather strap for the user to put their arm through. It has a large Caesar's Legion insignia on the front."
+	icon_state = "roman_shield"
+	item_state = "roman_shield"
+	block_chance = 40
+
+/obj/item/weapon/shield/riot/legionlight
+	name = "light legion shield"
+	desc = "A light weight oak disk, it's been molded together and fashioned with a light weight leather strap for the user to wield it. It appears to be more acustomed to stopping arrows than swords. It has a large Caesar's Legion insignia on the front."
+	icon_state = "buckler"
+	item_state = "buckler"
+	materials = list()
+	origin_tech = "materials=1;combat=3;biotech=2"
+	resistance_flags = FLAMMABLE
+	block_chance = 35
+
 /obj/item/weapon/shield/energy
 	name = "energy combat shield"
 	desc = "A shield capable of stopping most melee attacks. Protects user from almost all energy projectiles. It can be retracted, expanded, and stored anywhere."
