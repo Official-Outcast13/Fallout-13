@@ -366,13 +366,15 @@ var/list/biased_spawn_assoc = list(
 	
 	// If there's no faction latespawn, go through "none" latespawn
 	if(!D)
-		for(var/turf/LOCATION in latejoin)
-			if(!(locate(/mob/living/carbon/human) in LOCATION))
-				D = LOCATION
-				break
-	// If there still isn't any viable spawns just go "fuck it" and spawn him in a random space in the wastes
-	if(!D)
-		D = locate(/mob/living/carbon/human) in biased_spawn_assoc["none"]
+		for(var/f in character.faction)
+			if(f == "none")
+				for(var/turf/LOCATION in latejoin)
+					// Area of the turf must be the faction's area, and it has to not have a human on it at the time of spawn.
+					if(LOCATION.loc.type == biased_spawn_assoc[f] && !(locate(/mob/living/carbon/human) in LOCATION))
+						listPossibleFactionSpawns.Add(LOCATION)
+						
+		D = pick(listPossibleFactionSpawns)
+
 	if(!D)
 		for(var/turf/T in get_area_turfs(/area/shuttle/arrival))
 			if(!T.density)
