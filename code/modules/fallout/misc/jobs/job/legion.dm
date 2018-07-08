@@ -296,7 +296,7 @@
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
 	gloves = /obj/item/clothing/gloves/f13/leather
-	suit = /obj/item/clothing/suit/armor/legprime
+	suit = /obj/item/clothing/suit/armor/f13/legprime
 	head = /obj/item/clothing/head/helmet/f13/legprime
 	belt = /obj/item/weapon/storage/belt/legionbelt/full
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
