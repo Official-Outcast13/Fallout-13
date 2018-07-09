@@ -27,6 +27,8 @@
 			continue
 		if(bp && istype(bp ,/obj/item/clothing))
 			var/obj/item/clothing/C = bp
+			if(!C)
+				continue
 			if(C.body_parts_covered & def_zone.body_part)
 				protection += C.armor[d_type]
 	return protection

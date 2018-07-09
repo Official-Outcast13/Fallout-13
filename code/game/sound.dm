@@ -10,7 +10,7 @@
 	var/turf/turf_source = get_turf(source)
 	var/volume
 	var/distance
-	var/range = world.view + extrarange 
+	var/range = world.view + extrarange
  	// Looping through the player list has the added bonus of working for mobs inside containers
 	for (var/P in player_list)
 		var/mob/M = P
@@ -102,7 +102,7 @@
 /client/proc/playtitlemusic()
 	if(!ticker || !ticker.login_music)
 		return
-	if(prefs && (prefs.toggles & SOUND_LOBBY))
+	if(prefs && (prefs.toggles & SOUND_LOBBY) && sound_system)
 		sound_system.PlayMusic(ticker.login_music)
 
 /proc/get_rand_frequency()

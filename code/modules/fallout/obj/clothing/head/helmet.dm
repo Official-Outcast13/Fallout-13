@@ -141,18 +141,6 @@
 	resistance_flags = FIRE_PROOF
 	self_weight = 1
 
-/obj/item/clothing/head/helmet/f13/trooper
-	name = "trooper helmet"
-	desc = "A dully-colored helmet designed to provide troopers a basic head protection.<br>It has a very rough \"mass-produced\" look to it, as it is issued to all NCR soldiers and MPs."
-	icon_state = "trooper"
-	item_state = "trooper"
-	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 10)
-	flags_inv = HIDEEARS|HIDEHAIR
-	put_on_delay = 10
-	strip_delay = 30
-	resistance_flags = FIRE_PROOF
-	self_weight = 1
-
 /obj/item/clothing/head/helmet/f13/liquidhelmet
 	name = "ballistic helmet"
 	desc = "A custom built ballistic helmet made with very advanced kevlar and dyneema hybrid plates for maximum protection against most projectiles. It appears to be based on an NCR ranger's helmet, including a similar night vision function."
@@ -237,9 +225,8 @@
 	self_weight = 1
 	darkness_view = 8
 
-
 /obj/item/clothing/head/helmet/f13/legrecruit
-	name = "recruit helmet"
+	name = "recruit legionary helmet"
 	desc = "A Legion recruit helmet, made of fine molerat leather. Or was it gecko leather? Come to think of it, that other guy from Legion had a helmet made of brahmin leather..."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
@@ -249,8 +236,19 @@
 	strip_delay = 30
 	self_weight = 1
 
+/obj/item/clothing/head/helmet/f13/legprime
+	name = "prime legionary helmet"
+	desc = "It appears to be a pitcher helmet with a red line burned into it. Vaguely smells of blood and sweat."
+	icon_state = "legprime"
+	item_state = "legprime"
+	armor = list(melee = 55, bullet = 30, laser = 25, energy = 20, bomb = 25, bio = 20, rad = 25, fire = 25, acid = 25)
+	flags_inv = HIDEEARS|HIDEHAIR
+	put_on_delay = 10
+	strip_delay = 30
+	self_weight = 1
+
 /obj/item/clothing/head/helmet/f13/legvexil
-	name = "vexillarius helmet"
+	name = "legion vexillarius helmet"
 	desc = "Vis gregis est lupus, ac vis lupi est grex.<br>100% of wolf."
 	icon_state = "legvexil"
 	item_state = "legvexil"
@@ -261,7 +259,7 @@
 	self_weight = 0.5
 
 /obj/item/clothing/head/helmet/f13/legdecan
-	name = "decanus helmet"
+	name = "legion decanus helmet"
 	desc = "A Legion decanus helmet, made of tanned leather and decorated with feathers."
 	icon_state = "legdecan"
 	item_state = "legdecan"
@@ -272,7 +270,7 @@
 	self_weight = 0.5
 
 /obj/item/clothing/head/helmet/f13/legdecan/alt //Variant with spiky feathers and pre-made goggles by Darkstalker_Darkfold.
-	name = "decanus helmet"
+	name = "legion decanus helmet"
 	desc = "A Legion decanus helmet, made of tanned leather and decorated with pieces of biker goggles.<br>This one has particularly spiky feathers..."
 	icon_state = "legdecanalt"
 	item_state = "legdecanalt"
@@ -280,7 +278,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/helmet/f13/legcenturion
-	name = "centurion helmet"
+	name = "legion centurion helmet"
 	desc = "A metal helmet commonly worn by the Centurion, a ranked officer of Caesar's Legion."
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
@@ -291,7 +289,7 @@
 	self_weight = 2
 
 /obj/item/clothing/head/helmet/f13/leglegate
-	name = "legate helmet"
+	name = "legion legatus helmet"
 	desc = "A metal helmet destined to adorn the head of the Legate, a ranked officer of Caesar's Legion."
 	icon_state = "leglegate"
 	item_state = "leglegate"
@@ -627,6 +625,8 @@
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	self_weight = 5
 
+//NCR
+
 /obj/item/clothing/head/helmet/power_armor/ncr
 	name = "NCR power helmet"
 	desc = "A pre-War power armor helmet, recovered and maintained by NCR engineers. It has a rack of cooling fans but only excessive padding for neck support."
@@ -640,6 +640,30 @@
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	self_weight = 5
+
+/obj/item/clothing/head/helmet/ncr/trooper
+	name = "trooper helmet"
+	desc = "A dully-colored helmet designed to provide troopers a basic head protection.<br>It has a very rough \"mass-produced\" look to it, as it is issued to all NCR soldiers and MPs."
+	icon_state = "trooper"
+	item_state = "trooper"
+	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 10)
+	flags_inv = HIDEEARS|HIDEHAIR
+	put_on_delay = 10
+	strip_delay = 30
+	resistance_flags = FIRE_PROOF
+	self_weight = 1
+
+/obj/item/clothing/head/helmet/f13/trooper
+	name = "trooper helmet"
+	desc = "A dully-colored helmet designed to provide troopers a basic head protection.<br>It has a very rough \"mass-produced\" look to it, as it is issued to all NCR soldiers and MPs."
+	icon_state = "trooper"
+	item_state = "trooper"
+	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 10)
+	flags_inv = HIDEEARS|HIDEHAIR
+	put_on_delay = 10
+	strip_delay = 30
+	resistance_flags = FIRE_PROOF
+	self_weight = 1
 
 //Knights of the Apocalypse
 
