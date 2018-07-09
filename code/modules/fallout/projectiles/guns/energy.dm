@@ -25,7 +25,7 @@
 //////////PLASMA/////////
 
 /obj/item/weapon/gun/energy/plasma
-	name ="Plasma Rifle"
+	name ="plasma rifle"
 	icon_state = "plasma"
 	item_state = "plasma"
 	icon =  'icons/fallout/objects/guns/energy.dmi'
@@ -40,7 +40,7 @@
 	fire_delay = 3
 
 /obj/item/weapon/gun/energy/plasma/glock
-	name ="Glock 86"
+	name ="glock 86"
 	icon_state = "glock86"
 	item_state = "glock86"
 	icon = 'icons/fallout/objects/guns/energy.dmi'
@@ -54,7 +54,7 @@
 	scopetype = /obj/screen/fullscreen/scope/tech
 
 /obj/item/weapon/gun/energy/plasma/pistol
-	name ="Plasma Pistol"
+	name ="plasma pistol"
 	icon_state = "plasma-pistol"
 	item_state = "plasma-pistol"
 	icon = 'icons/fallout/objects/guns/energy.dmi'
@@ -65,7 +65,7 @@
 	burst_size = 1
 
 /obj/item/weapon/gun/energy/plasma/tri
-	name ="Multiplas"
+	name ="multiplas"
 	icon_state = "multiplas"
 	item_state = "multiplas"
 	origin_tech = "combat=3;magnets=2"
@@ -76,22 +76,23 @@
 	w_class = 3
 
 /obj/item/weapon/gun/energy/plasma/turbo
-	name ="turbo plasma rifle"
+	name ="plasma caster"
 	icon_state = "turbo-plasma-rifle"
 	item_state = "turbo-plasma-rifle"
 	icon = 'icons/fallout/objects/guns/energy.dmi'
-	desc = "A modified winchester P94 plasma rifle. The plasma bolt chamber has been hotwired to accelerate the bolt formation process."
+	desc = "A heavy plasma weapon, built around the frame of a industrial cutting laser, but refurbished to emit focused bolts of plasma at a high speed without overheating."
 	origin_tech = "combat=6;magnets=6"
 	ammo_type = list(/obj/item/ammo_casing/energy/f13plasma/turbo)
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_HUGE
 	fire_delay = 0
 	w_class = 4
+	burst_size = 3
 
 ///////LASERS//////
 
 /obj/item/weapon/gun/energy/laser/rcw
-	name ="Laser RCW"
+	name ="laser RCW"
 	icon_state = "rcw"
 	item_state = "rcw"
 	icon = 'icons/fallout/objects/guns/energy.dmi'
@@ -104,7 +105,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/weapon/gun/energy/laser/pistol
-	name ="Laser Pistol"
+	name ="laser pistol"
 	icon_state = "laser-pistol"
 	item_state = "laser-pistol"
 	icon = 'icons/fallout/objects/guns/energy.dmi'
@@ -118,33 +119,34 @@
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/gun/energy/laser/rifle
-	name ="Laser Rifle AER9"
+	name ="AER9 laser rifle"
 	icon_state = "laser-rifle9"
 	item_state = "laser-rifle9"
 	icon = 'icons/fallout/objects/guns/energy.dmi'
-	desc = "Laser rifles are high-tech weapons that emit a concentrated beam of coherent light, with sufficient wattage to do considerable damage."
+	desc = "A prototype laser rifle, meant to fire much faster and longer without overheating"
 	origin_tech = "combat=3;magnets=2"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rifle)
-	burst_size = 2
+	burst_size = 5
 	w_class = 3
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/weapon/gun/energy/laser/rifle/aer13
-	name ="Laser Rifle AER13"
+	name ="AER13 laser rifle"
+	desc = "It appears to be a even more lightened version of the original AER9 rifle."
 	icon_state = "laser-rifle13"
 	item_state = "laser-rifle13"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rifle/aer13)
-	burst_size = 3
+	burst_size = 5
 
 /obj/item/weapon/gun/energy/laser/rifle/tri
-	name ="Tribeam"
+	name ="tribeam laser rifle"
 	icon_state = "tribeam"
 	item_state = "tribeam"
 	origin_tech = "combat=3;magnets=2"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rifle/tri)
 	burst_size = 1
-	fire_delay = 5
+	fire_delay = 3
 	w_class = 3
 
 /obj/item/weapon/gun/energy/laser/laer
@@ -162,7 +164,7 @@
 //Gauss Rifles//
 
 /obj/item/weapon/gun/energy/laser/gaussrifle
-	name = "Gauss Rifle"
+	name = "gauss rifle"
 	desc = "The Gauss Rifle is loaded with a magazine filled with slivers of inert metal. Using a substantial amount of charge, a power cell activates magnetic coils to hurtle these slugs at incredible speeds."
 	icon = 'icons/fallout/objects/guns/energy.dmi'
 	icon_state = "gaussrifle"
