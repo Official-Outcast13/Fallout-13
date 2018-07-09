@@ -1,7 +1,7 @@
 //Krotchy doll, hail Postal. by WalterJe
 
 /obj/item/weapon/krotchy
-	name = "Krotchy doll"
+	name = "krotchy doll"
 	desc = "The Bad Touch - Krotchy Doll."
 	icon = 'icons/fallout/objects/items.dmi'
 	icon_state = "doll"
