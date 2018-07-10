@@ -18,31 +18,31 @@
 	item_state = "johnberet"
 
 /obj/item/clothing/head/rolandhat
-	name = "Sun hat"
+	name = "sun hat"
 	desc = "An old and frayed leather farm hand's hat, with a single length of sisal rope wrapped around it loosely."
 	icon_state = "rolandhat"
 	item_state = "rolandhat"
 
 /obj/item/clothing/head/rolandhattwo
-	name = "Sun hat"
+	name = "sun hat"
 	desc = "An old and frayed leather farm hand's hat, with a single length of sisal rope wrapped around it loosely."
 	icon_state = "rolandhattwo"
 	item_state = "rolandhattwo"
 
 /obj/item/clothing/head/gunslingerhat
-	name = "Sun hat"
+	name = "sun hat"
 	desc = "An old and frayed leather farm hand's hat. It seems to have walked the wastes for centuries judging by it's wear"
 	icon_state = "gunslingerhat"
 	item_state = "gunslingerhat"
 
 /obj/item/clothing/head/rolandhatthree
-	name = "Sun hat"
+	name = "sun hat"
 	desc = "An old and frayed leather farm hand's hat. It seems to have walked the wastes for centuries judging by it's wear"
 	icon_state = "rolandhatthree"
 	item_state = "rolandhatthree"
 
 /obj/item/clothing/head/johncowboyhat
-	name = "Cowboy hat"
+	name = "cowboy hat"
 	desc = "A snazzy cowboy hat made from an olive shade of suede material, looking particularly classy if it's paired with the right clothing."
 	icon_state = "johncowboyhat"
 	item_state = "johncowboyhat"
@@ -126,6 +126,14 @@
 	icon_state = "officer"
 	item_state = "dethat"
 	flags_inv = HIDEHAIR
+
+/obj/item/clothing/head/f13/ncr_captain
+	name = "NCR captain beret"
+	desc = "A cotton, neatly shaved and formed beret. Theres a two headed bear with two silver bars on its side on the front of the beret. It smells vaguely of cigars and whiskey. There also appears to be a liner of amrid weave, how exotic."
+	icon_state = "officer"
+	item_state = "dethat"
+	flags_inv = HIDEHAIR
+	armor = list(melee = 40, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 20)
 
 /obj/item/clothing/head/f13/sergeant
 	name = "ranger hat"

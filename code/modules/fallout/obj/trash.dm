@@ -15,12 +15,12 @@
 	icon_state = "bubblegum_large"
 
 /obj/item/trash/f13/cram
-	name = "\proper empty Cram packaging"
+	name = "\proper empty cram packaging"
 	desc = "An empty package of Cram - pre-War junk food."
 	icon_state = "cram"
 
 /obj/item/trash/f13/cram_large
-	name = "\proper big empty Cram packaging"
+	name = "\proper big empty cram packaging"
 	desc = "A large empty package of Cram - pre-War junk food."
 	icon_state = "cram_large"
 

@@ -16,6 +16,8 @@
 		var/mob/living/carbon/human/H = C
 		if(NODISMEMBER in H.dna.species.species_traits) // species don't allow dismemberment
 			return 0
+	if(ArmorPreventsDismemberment())
+		return 0
 
 
 	var/obj/item/bodypart/affecting = C.get_bodypart("chest")
@@ -53,7 +55,8 @@
 		var/mob/living/carbon/human/H = C
 		if(NODISMEMBER in H.dna.species.species_traits) // species don't allow dismemberment
 			return 0
-
+	if(ArmorPreventsDismemberment())
+		return 0
 	var/organ_spilled = 0
 	var/turf/T = get_turf(C)
 	C.add_splatter_floor(T)
@@ -74,6 +77,34 @@
 	if(organ_spilled)
 		C.visible_message("<span class='danger'><B>[C]'s internal organs spill out onto the floor!</B></span>")
 	return 1
+
+//Check we arent wearing anything that prevents dismemberment, i.e power armor
+/obj/item/bodypart/proc/ArmorPreventsDismemberment()
+	if(!owner)
+		return 0
+	var/list/equip_list = null
+	var/mob/living/carbon/C = owner
+	if(!dismemberable)
+		return 0
+
+	if(ishuman(C))
+		var/mob/living/carbon/human/H = C
+		equip_list = list(H.head, H.wear_mask, H.wear_suit, H.w_uniform, H.back, H.gloves, H.shoes, H.belt, H.s_store, H.glasses, H.ears, H.wear_id)
+	else return 0
+
+
+	for(var/el in equip_list)
+		if(!el)
+			continue
+		if(el && istype(el ,/obj/item/clothing))
+			var/obj/item/clothing/Cl = el
+			if(!Cl)
+				continue
+			if(Cl.body_parts_covered & src.body_part)
+				/*this equipment overlays this bodypart - check for dismember flag*/
+				if(Cl.special_defence & PREVENTDISMEMBER)
+					return 1
+	return 0
 
 
 
