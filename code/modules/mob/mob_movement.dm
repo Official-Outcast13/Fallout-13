@@ -166,8 +166,7 @@
 
 	mob.trigger_aiming(TARGET_CAN_MOVE)
 
-	if(mob.pulling)
-		mob.Move_Pulled(mob.loc, 1)
+	var/turf/lastLoc = mob.loc
 
 	if(mob.confused)
 		if(mob.confused > 40)
@@ -180,6 +179,10 @@
 			step(mob, direct)
 	else
 		. = ..()
+
+	if(mob.pulling)
+		mob.Move_Pulled(lastLoc, 1)
+
 	moving = 0
 	if(mob && .)
 		mob.throwing = 0
@@ -320,6 +323,10 @@
 /mob/proc/Move_Pulled(atom/A, forced=0)
 	if(!pulling)
 		return
+	if(forced)
+		pulling.Move(A)
+		return
+		
 	if(pulling.anchored || !pulling.Adjacent(src))
 		stop_pulling()
 		return
@@ -329,10 +336,7 @@
 			stop_pulling()
 			return
 	if(A == loc && pulling.density)
-		if(forced)
-			pulling.loc = A
-		else
-			return
+		return
 	if(!Process_Spacemove(get_dir(pulling.loc, A)))
 		return
 	step(pulling, get_dir(pulling.loc, A))
