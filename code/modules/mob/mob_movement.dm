@@ -167,7 +167,7 @@
 	mob.trigger_aiming(TARGET_CAN_MOVE)
 
 	if(mob.pulling)
-		mob.Move_Pulled(mob.loc)
+		mob.Move_Pulled(mob.loc, 1)
 
 	if(mob.confused)
 		if(mob.confused > 40)
@@ -317,7 +317,7 @@
 	return 0
 
 //moves the mob/object we're pulling
-/mob/proc/Move_Pulled(atom/A)
+/mob/proc/Move_Pulled(atom/A, forced=0)
 	if(!pulling)
 		return
 	if(pulling.anchored || !pulling.Adjacent(src))
@@ -329,7 +329,10 @@
 			stop_pulling()
 			return
 	if(A == loc && pulling.density)
-		return
+		if(forced)
+			pulling.loc = A
+		else
+			return
 	if(!Process_Spacemove(get_dir(pulling.loc, A)))
 		return
 	step(pulling, get_dir(pulling.loc, A))
