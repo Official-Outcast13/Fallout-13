@@ -254,7 +254,8 @@ var/next_mob_id = 0
 		update_sight()
 		if(client.eye != src)
 			var/atom/AT = client.eye
-			AT.get_remote_view_fullscreens(src)
+			if(AT)
+				AT.get_remote_view_fullscreens(src)
 		else
 			clear_fullscreen("remote_view", 0)
 		update_pipe_vision()
@@ -625,6 +626,9 @@ var/next_mob_id = 0
 		return 0
 	if(restrained())
 		return 0
+	// Apparently clicking also needs facing.
+	//if(dir_change_lock)
+	//	return 0
 	return 1
 
 
@@ -687,7 +691,6 @@ var/next_mob_id = 0
 	if(!canface())
 		return 0
 	setDir(EAST)
-	update_vision_cone()
 	client.move_delay += movement_delay()
 	return 1
 
@@ -697,7 +700,6 @@ var/next_mob_id = 0
 	if(!canface())
 		return 0
 	setDir(WEST)
-	update_vision_cone()
 	client.move_delay += movement_delay()
 	return 1
 
@@ -707,7 +709,6 @@ var/next_mob_id = 0
 	if(!canface())
 		return 0
 	setDir(NORTH)
-	update_vision_cone()
 	client.move_delay += movement_delay()
 	return 1
 
@@ -717,7 +718,6 @@ var/next_mob_id = 0
 	if(!canface())
 		return 0
 	setDir(SOUTH)
-	update_vision_cone()
 	client.move_delay += movement_delay()
 	return 1
 
@@ -933,6 +933,7 @@ var/next_mob_id = 0
 /mob/vv_get_dropdown()
 	. = ..()
 	. += "---"
+	.["Freeze"] = "?_src_=vars;timefreeze=\ref[src]"
 	.["Gib"] = "?_src_=vars;gib=\ref[src]"
 	.["Give Spell"] = "?_src_=vars;give_spell=\ref[src]"
 	.["Remove Spell"] = "?_src_=vars;remove_spell=\ref[src]"
@@ -954,3 +955,4 @@ var/next_mob_id = 0
 
 /mob/proc/is_invisible_to(var/mob/viewer)
 	return (!alpha || !mouse_opacity || viewer.see_invisible < invisibility)
+

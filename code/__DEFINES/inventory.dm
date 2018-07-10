@@ -161,3 +161,6 @@
 
 #define TINT_DARKENED 2			//Threshold of tint level to apply weld mask overlay
 #define TINT_BLIND 3			//Threshold of tint level to obscure vision fully
+
+//flags for special defences
+#define PREVENTDISMEMBER	1 //Prevents a bodypart from being dismembered under /bodypart/proc/dismember() when equipped

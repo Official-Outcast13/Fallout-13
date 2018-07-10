@@ -6,17 +6,18 @@ var/const/RANGER			=(1<<2)
 var/const/TROOPER			=(1<<3)
 //var/const/CCO				=(1<<4)
 
-var/const/PRIME				=(1<<4)
-var/const/LEGDECAN			=(1<<5)
-var/const/LEGVEX			=(1<<6)
-var/const/LEGCENTURION		=(1<<7)
-var/const/LEGLEGAT			=(1<<8)
+var/const/RECRUIT			=(1<<4)
+var/const/PRIME				=(1<<5)
+var/const/LEGDECAN			=(1<<6)
+var/const/LEGVEX			=(1<<7)
+var/const/LEGCENTURION		=(1<<8)
+var/const/LEGLEGAT			=(1<<9)
 
-var/const/SHERIFF			=(1<<9)
-var/const/SETTLER			=(1<<10)
-var/const/ADVENTURER		=(1<<11)
-var/const/RAIDER        	=(1<<12)
-var/const/MAYOR				=(1<<13)
+var/const/SHERIFF			=(1<<10)
+var/const/SETTLER			=(1<<11)
+var/const/ADVENTURER		=(1<<12)
+var/const/RAIDER        	=(1<<13)
+var/const/MAYOR				=(1<<14)
 
 //This jobs using medsci flag, cause me too lazy.
 

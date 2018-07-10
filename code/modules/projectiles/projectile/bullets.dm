@@ -322,7 +322,7 @@
 	weaken = 5
 	dismemberment = 40
 	armour_penetration = 50
-	var/breakthings = TRUE
+	var/breakthings = FALSE
 
 /obj/item/projectile/bullet/sniper/on_hit(atom/target, blocked = 0)
 	if((blocked != 100) && (!ismob(target) && breakthings))

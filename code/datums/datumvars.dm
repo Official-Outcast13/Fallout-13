@@ -488,6 +488,19 @@
 		src.holder.show_player_panel(M)
 		href_list["datumrefresh"] = href_list["mob_player_panel"]
 
+	else if(href_list["timefreeze"])
+		if(!check_rights(0))
+			return
+
+		var/mob/M = locate(href_list["timefreeze"])
+		if(!istype(M))
+			to_chat(usr, "This can only be used on instances of type /mob")
+			return
+
+		M.timeFreeze()
+		//src.holder.show_player_panel(M)
+		//href_list["datumrefresh"] = href_list["mob_player_panel"]
+
 	else if(href_list["godmode"])
 		if(!check_rights(R_REJUVINATE))
 			return

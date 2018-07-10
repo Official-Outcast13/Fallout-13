@@ -150,50 +150,76 @@
 	resistance_flags = FIRE_PROOF
 	self_weight = 15
 
+// legion armors
+
 /obj/item/clothing/suit/armor/f13/legrecruit
-	name = "recruit armor"
+	name = "recruit legionary armor"
 	desc = "Legion recruit armor is common light armor, supplied to recruit legionaries and to recruit decanus units.<br>Like most of the Caesar's Legion armor, it is made of repurposed sports equipment, consisting of a football player's protective shoulder and chest pads reinforced with additional leather padding and worn over a baseball catcher's vest."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 60, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 50, rad = 50, fire = 50, acid = 50)
+	armor = list(melee = 35, bullet = 45, laser = 40, energy = 40, bomb = 60, bio = 50, rad = 50, fire = 50, acid = 50)
+	put_on_delay = 60
+	strip_delay = 60
+	self_weight = 3
+
+/obj/item/clothing/suit/armor/f13/legprime
+	name = "prime legionary armor"
+	desc = "It appears to be a set of prime legionary armor, nothing more than a more firmly constructed and well worn version of the recruit armor."
+	icon_state = "legrecruit"
+	item_state = "legrecruit"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET
+	armor = list(melee = 40, bullet = 40, laser = 50, energy = 50, bomb = 60, bio = 50, rad = 50, fire = 50, acid = 50)
 	put_on_delay = 60
 	strip_delay = 60
 	self_weight = 3
 
 /obj/item/clothing/suit/armor/f13/legvexil
-	name = "vexillarius armor"
+	name = "legion vexillarius armor"
 	desc = "The armor appears to be based on a suit of Caesar's Legion veteran armor, with the addition of circular metal plates attached to the torso, as well as a banner displaying the emblem of the Legion worn on the back."
 	icon_state = "legvexil"
 	item_state = "legvexil"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 50, bullet = 40, laser = 30, energy = 40, bomb = 40, bio = 30, rad = 30, fire = 30, acid = 30)
+	armor = list(melee = 45, bullet = 45, laser = 45, energy = 45, bomb = 40, bio = 30, rad = 30, fire = 30, acid = 30)
 	put_on_delay = 60
 	strip_delay = 60
 	self_weight = 5
 
+/obj/item/clothing/suit/armor/f13/legdecan
+	name = "legion decanus armor"
+	desc = "A set of decanus armor, it appears to be form fitted to a officer of ranking command in Caesar's Legion."
+	icon_state = "legcenturion"
+	item_state = "legcenturion"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 70, bio = 70, rad = 80, fire = 80, acid = 80)
+	put_on_delay = 60
+	strip_delay = 60
+	self_weight = 10
+
 /obj/item/clothing/suit/armor/f13/legcenturion
-	name = "centurion armor"
+	name = "legion centurion armor"
 	desc = "The Legion centurion armor is by far the strongest suit of armor available to Caesar's Legion soldiers.<br>The armor is composed from various pieces of armor taken from that of the wearer's defeated opponents in combat."
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 80, bullet = 75, laser = 75, energy = 75, bomb = 70, bio = 70, rad = 80, fire = 80, acid = 80)
+	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 70, bio = 70, rad = 80, fire = 80, acid = 80)
 	put_on_delay = 60
 	strip_delay = 60
 	self_weight = 10
 
 /obj/item/clothing/suit/armor/f13/leglegate
-	name = "legate armor"
+	name = "legion legatus armor"
 	desc = "The armor appears to be a full suit of heavy-gauge steel and offers full body protection.<br>The armor itself bears numerous battle scars.<br>The Legate's suit appears originally crafted, in contrast to other Legion armor which consists of repurposed pre-War sports equipment."
 	icon_state = "leglegate"
 	item_state = "leglegate"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 90, bullet = 90, laser = 80, energy = 80, bomb = 75, bio = 75, rad = 90, fire = 90, acid = 90)
+	armor = list(melee = 70, bullet = 70, laser = 70, energy = 70, bomb = 75, bio = 75, rad = 90, fire = 90, acid = 90)
 	put_on_delay = 60
 	strip_delay = 60
 	resistance_flags = FIRE_PROOF
 	self_weight = 15
+
+// combat armors
 
 /obj/item/clothing/suit/armor/f13/combat_mk1
 	name = "reinforced combat armor mark I"
@@ -219,79 +245,112 @@
 	resistance_flags = FIRE_PROOF
 	self_weight = 5
 
+// ncr armors
+
 /obj/item/clothing/suit/armor/f13/ncr
-	name = "trooper armor"
+	name = "NCR trooper armor"
 	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons, and gauntlets. Worn by NCR troops in combat environments.<br>It's attached via leather straps and buckles."
 	icon_state = "ncr_armor1"
 	item_state = "ncr_armor1"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 25, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 20, fire = 10, acid = 20)
+	armor = list(melee = 30, bullet = 30, laser = 30, energy = 30, bomb = 20, bio = 0, rad = 20, fire = 10, acid = 20)
 	put_on_delay = 50
 	strip_delay = 50
 	resistance_flags = FIRE_PROOF
 	self_weight = 5
 
+/obj/item/clothing/suit/armor/f13/ncr/recruit
+	name = "NCR reserve trooper armor"
+	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons, and gauntlets, worn by NCR soldiers in combat environments.<br>This one has had its breastplate emblazoned with the emblem of the NCR, that has slightly faded over time. It also appears to be more haphazardly constructed than other versions."
+	icon_state = "ncr_armor2"
+	item_state = "ncr_armor2"
+
 /obj/item/clothing/suit/armor/f13/ncr/soldier
-	name = "standard issue trooper armor"
+	name = "NCR standard issue trooper armor"
 	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons, and gauntlets, worn by NCR soldiers in combat environments.<br>This one has had its breastplate emblazoned with the emblem of the NCR, that has slightly faded over time."
 	icon_state = "ncr_armor2"
 	item_state = "ncr_armor2"
 
 /obj/item/clothing/suit/armor/f13/ncr/patriot
-	name = "trooper armor of \"Patriot\" battalion"
+	name = "NCR trooper armor of \"Patriot\" battalion"
 	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR patriots in combat environments.<br>This one has a five-pointed star painted over the chestplate with white paint - it must be a battalion insignia."
 	icon_state = "ncr_armor3"
 	item_state = "ncr_armor3"
 
 /obj/item/clothing/suit/armor/f13/ncr/commie
-	name = "trooper armor of \"Commie\" battalion"
+	name = "NCR trooper armor of \"Commie\" battalion"
 	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR comrades in combat environments.<br>This one has a five-pointed star painted over the chestplate with red paint - it must be a battalion insignia."
 	icon_state = "ncr_armor4"
 	item_state = "ncr_armor4"
 
 /obj/item/clothing/suit/armor/f13/ncr/preacher
-	name = "trooper armor of \"Preacher\" battalion"
+	name = "NCR trooper armor of \"Preacher\" battalion"
 	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR zealots in combat environments.<br>This one has a holy cross painted over the chestplate with yellow paint - it must be a battalion insignia."
 	icon_state = "ncr_armor5"
 	item_state = "ncr_armor5"
 
 /obj/item/clothing/suit/armor/f13/ncr/lover
-	name = "trooper armor of \"Lover\" battalion"
+	name = "NCR trooper armor of \"Lover\" battalion"
 	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR lovers in combat environments.<br>This one has a heart symbol painted over the chestplate with pink paint - it must be a battalion insignia."
 	icon_state = "ncr_armor6"
 	item_state = "ncr_armor6"
 
 /obj/item/clothing/suit/armor/f13/ncr/stalker //Cheeki breeki i v damke !!!
-	name = "trooper armor of \"Stalker\" battalion"
+	name = "NCR trooper armor of \"Stalker\" battalion"
 	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR explorers in combat environments.<br>This one has a radiation symbol painted over the chestplate with yellow paint - it must be a battalion insignia."
 	icon_state = "ncr_armor7"
 	item_state = "ncr_armor7"
 
 /obj/item/clothing/suit/armor/f13/ncr/punisher
-	name = "trooper armor of \"Punisher\" battalion"
+	name = "NCR trooper armor of \"Punisher\" battalion"
 	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR heroes and villains in combat environments.<br>This one has a skull symbol painted over the chestplate with white paint - it must be a battalion insignia."
 	icon_state = "ncr_armor8"
 	item_state = "ncr_armor8"
 
 /obj/item/clothing/suit/armor/f13/ncr/facewrap
-	name = "face wrap armor"
+	name = "NCR face wrap armor"
 	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR scouts in combat environments.<br>This one has the facewrap, designed to be pulled over the user's face to protect oneself from dust particles and other mainly radioactive elements."
 	icon_state = "ncr_armor9"
 	item_state = "ncr_armor9"
 	self_weight = 6
-	armor = list(melee = 25, bullet = 20, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 50, fire = 20, acid = 20) //Better radiation protection, thank the facewrap bro!
+	armor = list(melee = 40, bullet = 40, laser = 20, energy = 20, bomb = 10, bio = 0, rad = 50, fire = 20, acid = 20) //Better radiation protection, thank the facewrap bro!
 
 /obj/item/clothing/suit/armor/f13/sergeant
-	name = "ranger patrol armor"
+	name = "NCR patrol sergeant armor"
 	desc = "Military-grade combat armor designed to protect key sections of the human body from ballistic trauma with hard armored plates made from complex polymers and ceramics, with a flexible body suit interwoven with thermal-dissipative membranes and bulletproof material.<br>It has a matte-finish olive drab coloring by default, making it suitable for woodland and/or urban camouflage."
 	icon_state = "sergeant"
 	item_state = "sergeant"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 40, bullet = 30, laser = 30, energy = 25, bomb = 20, bio = 0, rad = 30, fire = 30, acid = 30)
+	armor = list(melee = 45, bullet = 45, laser = 45, energy = 45, bomb = 20, bio = 0, rad = 30, fire = 30, acid = 30)
 	put_on_delay = 40
 	strip_delay = 40
 	resistance_flags = FIRE_PROOF
 	self_weight = 7
+
+/obj/item/clothing/suit/armor/f13/ncr/salvaged
+	name = "NCR salvaged power armor"
+	desc = "A set of T-45d power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors.<br>Due to the lack of servomotors in the limbs, this armor is so heavy that it feels like you're carrying a brahmin on your back!"
+	icon_state = "t45bpowerarmor"
+	item_state = "t45bpowerarmor"
+	w_class = WEIGHT_CLASS_HUGE
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	flags = STOPSPRESSUREDMAGE
+	flags_inv = HIDEJUMPSUIT
+	put_on_delay = 50
+	strip_delay = 100
+	self_weight = 35
+	slowdown = 1
+	armor = list(melee = 55, bullet = 55, laser = 55, energy = 55, bomb = 15, bio = 40, rad = 20, fire = 40, acid = 30)
+
+/obj/item/clothing/suit/armor/f13/power_armor/sierra
+	name = "NCR scorched sierra power armor"
+	desc = "A set of repurposed T-45d Power Armor, with a bears head mounted onto the shoulder and secured with a strap with a large gold medallion clip holding it snug. It holds a rack of cooling fans and a stream lined set of hydraulic actuators. It appears to have once been lined with a gold trim. It also appears to have a scorched layer of soot burned into it."
+	icon_state = "sierra"
+	item_state = "sierra"
+	armor = list(melee = 80, bullet = 80, laser = 80, energy = 80, bomb = 35, bio = 40, rad = 20, fire = 40, acid = 30)
+	self_weight = 30
+
+// ncr armor end
 
 
 /obj/item/clothing/suit/armor/f13/battlecoat //Maxson's battlecoat from Fallout 4
@@ -318,21 +377,6 @@
 	self_weight = 2
 	allowed = list(/obj/item/weapon/gun/ballistic/)
 
-/obj/item/clothing/suit/armor/f13/ncr/salvaged
-	name = "NCR salvaged power armor"
-	desc = "A set of T-45d power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors.<br>Due to the lack of servomotors in the limbs, this armor is so heavy that it feels like you're carrying a brahmin on your back!"
-	icon_state = "t45bpowerarmor"
-	item_state = "t45bpowerarmor"
-	w_class = WEIGHT_CLASS_HUGE
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	flags = STOPSPRESSUREDMAGE
-	flags_inv = HIDEJUMPSUIT
-	put_on_delay = 50
-	strip_delay = 100
-	self_weight = 35
-	slowdown = 1
-	armor = list(melee = 60, bullet = 45, laser = 40, energy = 10, bomb = 15, bio = 40, rad = 20, fire = 40, acid = 30)
-
 /obj/item/clothing/suit/armor/f13/power_armor
 	w_class = WEIGHT_CLASS_HUGE
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
@@ -344,7 +388,7 @@
 	strip_delay = 200
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	self_weight = 35
-
+	special_defence = PREVENTDISMEMBER
 
 /obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, slot)
 	if(ishuman(user))
@@ -355,13 +399,14 @@
 			..()
 	return ..()
 
+// brotherhood power armors
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
-	armor = list(melee = 55, bullet = 50, laser = 40, energy = 30, bomb = 50, bio =100, rad = 40, fire = 50, acid = 50)
+	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 50, bio =100, rad = 40, fire = 50, acid = 50)
 	self_weight = 30
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b
@@ -369,7 +414,7 @@
 	desc = "A mass-produced pinnacle of pre-War engineering.<br>Developed in the laboratories of the West Tek Research Facility, the T-51b was deployed at the end of the Anchorage Reclamation, and by January 2077, the armor had become standard issue for American soldiers in the Army's Mechanized Cavalry Regiments."
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
-	armor = list(melee = 60, bullet = 60, laser = 50, energy = 40, bomb = 60, bio = 100, rad = 60, fire = 60, acid = 60)
+	armor = list(melee = 70, bullet = 70, laser = 70, energy = 70, bomb = 60, bio = 100, rad = 60, fire = 60, acid = 60)
 	self_weight = 25
 
 /obj/item/clothing/suit/armor/f13/power_armor/t60
@@ -377,40 +422,42 @@
 	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b power armor as the pinnacle of powered armor technology in the U.S. military arsenal.<br>Incorporating design elements from the earlier T-45, the T-60 was deployed domestically among U.S. Army units just prior to the dropping of the bombs."
 	icon_state = "t60powerarmor"
 	item_state = "t60powerarmor"
-	armor = list(melee = 75, bullet = 70, laser = 60, energy = 50, bomb = 60, bio = 100, rad = 75, fire = 70, acid = 70)
+	armor = list(melee = 80, bullet = 80, laser = 80, energy = 80, bomb = 60, bio = 100, rad = 75, fire = 70, acid = 70)
 	self_weight = 25
+
+// enclave armors
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "advanced power armor mark I"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advanced"
 	item_state = "advanced"
-	armor = list(melee = 70, bullet = 60, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 60, fire = 60, acid = 60)
+	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 60, bio = 100, rad = 60, fire = 60, acid = 60)
 	self_weight = 20
-
-/obj/item/clothing/suit/armor/f13/power_armor/tesla
-	name = "tesla power armor"
-	desc = "A variant of the Enclave's advanced power armor Mk I, jury-rigged with a Tesla device that is capable of dispersing a large percentage of the damage done by directed-energy attacks.<br>As it's made of complex composite materials designed to block most of energy damage - it's notably weaker against kinetic impacts."
-	icon_state = "tesla"
-	item_state = "tesla"
-	armor = list(melee = 60, bullet = 40, laser = 85, energy = 85, bomb = 40, bio = 100, rad = 80, fire = 80, acid = 80)
-	self_weight = 15
 
 /obj/item/clothing/suit/armor/f13/power_armor/superadvanced
 	name = "advanced power armor mark II"
 	desc = "An improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "superadvanced"
 	item_state = "superadvanced"
-	armor = list(melee = 80, bullet = 80, laser = 70, energy = 65, bomb = 70, bio = 100, rad = 80, fire = 80, acid = 80)
+	armor = list(melee = 70, bullet = 70, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 80, fire = 80, acid = 80)
 	self_weight = 13
 
 /obj/item/clothing/suit/armor/f13/power_armor/shocktrooper
-	name = "shocktrooper power armor"
+	name = "hellfire power armor"
 	desc = "A \"Black Devil\" power armor - a high-end model used exclusively by the Enclave's Department of the Army and developed after the Great War and the destruction of the Enclave Oil Rig in 2241.<br>It is composed entirely of lightweight composites rather than the usual combination of metal and composite plates found on the previous designations of advanced power armor, the mark I and II."
 	icon_state = "shocktrooper"
 	item_state = "shocktrooper"
 	armor = list(melee = 80, bullet = 80, laser = 70, energy = 70, bomb = 80, bio = 100, rad = 90, fire = 80, acid = 80)
 	self_weight = 12
+
+/obj/item/clothing/suit/armor/f13/power_armor/tesla
+	name = "tesla power armor"
+	desc = "A variant of the Enclave's advanced power armor Mk I, jury-rigged with a Tesla device that is capable of dispersing a large percentage of the damage done by directed-energy attacks.<br>As it's made of complex composite materials designed to block most of energy damage - it's notably weaker against kinetic impacts."
+	icon_state = "tesla"
+	item_state = "tesla"
+	armor = list(melee = 55, bullet = 55, laser = 85, energy = 85, bomb = 40, bio = 100, rad = 80, fire = 80, acid = 80)
+	self_weight = 15
 
 /obj/item/clothing/suit/armor/f13/power_armor/badmin
 	name = "advanced power armor Mk III"

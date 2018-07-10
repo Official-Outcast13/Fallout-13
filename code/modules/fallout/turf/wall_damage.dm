@@ -6,6 +6,7 @@
 	var/global/damage_overlays[16]
 
 /turf/closed/wall/proc/take_damage(dam)
+
 	if(dam)
 		damage = max(0, damage + dam)
 		update_icon()
@@ -44,9 +45,14 @@
 	. = ..()
 	if(!.)
 		user.do_attack_animation(src)
-		if(W.force > hardness/3)
-			take_damage(W.force/4)
-			playsound(src, 'sound/effects/bang.ogg', 50, 1)
+		if(W.break_attack >= break_resist)
+			if(W.force > hardness/3)
+				var/full_damage = (W.wielded) ? W.force/30*W.w_class : W.force/35*W.w_class
+				take_damage(full_damage)
+				playsound(src, 'sound/effects/bang.ogg', 50, 1)
+			else
+				to_chat(user, text("<span class='notice'>You smash the wall with [W]. But looks ineffective</span>"))
+				playsound(src, 'sound/weapons/Genhit.ogg', 25, 1)
 		else
-			to_chat(user, text("<span class='notice'>You smash the wall with [W].</span>"))
+			to_chat(user, text("<span class='notice'>You smash the wall with [W]. But it's not strong enough to break that wall</span>"))
 			playsound(src, 'sound/weapons/Genhit.ogg', 25, 1)

@@ -338,7 +338,31 @@
 	if(iscyborg(equip))	//Borgs get borged in the equip, so we need to make sure we handle the new mob.
 		character = equip
 
-	var/D = pick(latejoin)
+	var/D = null
+	var/list/L = MAP_FACTIONS_LIST
+	var/list/turf/listPossibleFactionSpawns = list()
+
+	for(var/f in character.faction)
+		if(L.Find(f) && f != "none")
+			for(var/turf/LOCATION in latejoin)
+				// Area of the turf must be the faction's area, and it has to not have a human on it at the time of spawn.
+				if(LOCATION.loc.type == biased_spawn_assoc[f] && !(locate(/mob/living/carbon/human) in LOCATION))
+					listPossibleFactionSpawns.Add(LOCATION)
+
+	if(listPossibleFactionSpawns.len >= 1)
+		D = pick(listPossibleFactionSpawns)
+	
+	// If there's no faction latespawn, go through "none" latespawn
+	if(!D)
+		for(var/f in character.faction)
+			if(f == "none")
+				for(var/turf/LOCATION in latejoin)
+					// Area of the turf must be the faction's area, and it has to not have a human on it at the time of spawn.
+					if(LOCATION.loc.type == biased_spawn_assoc[f] && !(locate(/mob/living/carbon/human) in LOCATION))
+						listPossibleFactionSpawns.Add(LOCATION)
+						
+		D = pick(listPossibleFactionSpawns)
+
 	if(!D)
 		for(var/turf/T in get_area_turfs(/area/shuttle/arrival))
 			if(!T.density)

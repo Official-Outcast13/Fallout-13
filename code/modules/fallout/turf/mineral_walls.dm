@@ -135,7 +135,7 @@
 	icon = 'icons/fallout/turfs/walls/wood_crafted.dmi'
 	icon_state = "wood"
 	sheet_type = /obj/item/stack/sheet/mineral/wood
-	hardness = 70
+	hardness = 40
 	explosion_block = 0
 	smooth = SMOOTH_FALSE
 	//canSmoothWith = list(/turf/closed/wall/mineral/wood, /obj/structure/falsewall/wood)
@@ -187,7 +187,7 @@
 	desc = "A wall made of densely packed snow blocks."
 	icon = 'icons/turf/walls/snow_wall.dmi'
 	icon_state = "snow"
-	hardness = 80
+	hardness = 5
 	sheet_type = /obj/item/stack/sheet/mineral/snow
 	canSmoothWith = null
 

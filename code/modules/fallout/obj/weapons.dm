@@ -29,6 +29,22 @@
 	block_chance = 20
 	sharpness = IS_SHARP
 
+/obj/item/weapon/machete
+	name = "mastercrafted machete gladius"
+	desc = "This particular machete seems to have been forged with great care, the blacksmith taking weeks to fold it thousands of times and sharpen it to a few micron wide point. It feels much lighter in your hand."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "machete"
+	item_state = "machete"
+	flags = CONDUCT
+	slot_flags = SLOT_BELT
+	force = 45
+	throwforce = 35
+	w_class = 2
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	block_chance = 30
+	sharpness = IS_SHARP
+
 /obj/item/weapon/pipe
 	name = "lead pipe"
 	desc = "One of the ends has tape wrapped around it to improve grip, while the other is heavily corroded and/or bloodstained, and topped with a pipe fitting.<br>Though it has a short reach, it has decent damage and a fast swing."
@@ -248,9 +264,9 @@
 	icon_state = "sledgehammer0"
 	flags = CONDUCT
 	slot_flags = SLOT_BACK
-	force = 5
-	force_unwielded = 5
-	force_wielded = 20
+	force = 10
+	force_unwielded = 10
+	force_wielded = 30
 	throwforce = 25
 	throw_range = 7
 	w_class = 4
@@ -264,9 +280,9 @@
 	icon_state = "largesledgehammer0"
 	flags = CONDUCT
 	slot_flags = SLOT_BACK
-	force = 5
+	force = 10
 	force_unwielded = 10
-	force_wielded = 25
+	force_wielded = 35
 	throwforce = 25
 	throw_range = 7
 	w_class = 4
@@ -280,7 +296,7 @@
 	icon_state = "supersledgehammer0"
 	flags = CONDUCT
 	slot_flags = SLOT_BACK
-	force = 5
+	force = 10
 	force_unwielded = 10
 	force_wielded = 45
 	throwforce = 30
@@ -384,7 +400,7 @@
 	max_integrity = 200
 
 /obj/item/weapon/machetem
-	name = "Makeshift machete"
+	name = "makeshift machete"
 	desc = "This makeshift machete looks to be made out of a rusted lawnmower blade, duct tape, and a shoddy wooden handle.<br>It is the primary melee weapon of Caesar's Legion."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "machete2"
@@ -420,8 +436,8 @@
 	max_integrity = 250
 
 /obj/item/weapon/lumberaxe
-	name = "Axe"
-	desc = "An axe for chopping wood, or heads."
+	name = "axe"
+	desc = "An axe for chopping wood, or heads. This one appears to be leaning more towards heads."
 	icon_state = "lumberjack"
 	item_state = "lumberjack"
 	icon = 'icons/fallout/objects/melee.dmi'
