@@ -45,10 +45,10 @@
 		return
 	..()
 
-/mob/living/Move()
+/mob/living/Move(atom/newloc, direct)
 	if(timefrozen)
 		return
-	..()
+	..(newloc,direct) 
 
 /mob/living/swap_hand()
 	if(timefrozen)

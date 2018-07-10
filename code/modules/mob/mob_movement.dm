@@ -166,6 +166,9 @@
 
 	mob.trigger_aiming(TARGET_CAN_MOVE)
 
+	if(mob.pulling)
+		mob.Move_Pulled(mob.loc)
+
 	if(mob.confused)
 		if(mob.confused > 40)
 			step(mob, pick(cardinal))
@@ -177,7 +180,6 @@
 			step(mob, direct)
 	else
 		. = ..()
-
 	moving = 0
 	if(mob && .)
 		mob.throwing = 0
@@ -465,4 +467,4 @@
 	if(dir_change_lock)
 		..(newloc, src.dir)
 		return
-	..()
+	..(newloc,direct)
