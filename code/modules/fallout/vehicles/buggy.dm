@@ -77,3 +77,11 @@
 /obj/vehicle/fuel/motorcycle/buggy/interceptor
 	icon_state = "interceptor"
 	names = list("V8 Interceptor", "V8 Interceptor", "V8 Interceptor", "V8 Interceptor", "V8 Interceptor", "V8 Interceptor", "V8 Interceptor")
+
+/obj/vehicle/fuel/motorcycle/buggy/vertibird
+	name = "vertibird"
+	desc = "A fucking vertibird. Holy shit."
+	icon = 'icons/fallout/vehicles/vertibird.dmi'
+	icon_state = "vb-fast"
+	engine_on_sound = 'sound/f13machines/vertibird_start.ogg'
+	engine_loop_sound = 'sound/f13machines/vertibird_loop.ogg'
