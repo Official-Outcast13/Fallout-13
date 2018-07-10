@@ -73,9 +73,9 @@
 /obj/item/projectile/bullet/break_attack = WOOD_BREAK
 /obj/item/projectile/kinetic/break_attack = WOOD_BREAK
 /obj/item/projectile/temp/break_attack = METAL_BREAK
-/obj/item/projectile/beam/break_attack = REINFORCED_BREAK
-/obj/item/projectile/energy/break_attack = REINFORCED_BREAK
-/obj/item/projectile/plasma/break_attack = REINFORCED_BREAK
+/obj/item/projectile/beam/break_attack = METAL_BREAK
+/obj/item/projectile/energy/break_attack = METAL_BREAK
+/obj/item/projectile/plasma/break_attack = METAL_BREAK
 
 // Bullet specifics
 /obj/item/projectile/bullet/a40mm/break_attack = REINFORCED_BREAK

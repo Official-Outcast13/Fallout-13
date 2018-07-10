@@ -342,14 +342,14 @@
 	slowdown = 1
 	armor = list(melee = 55, bullet = 55, laser = 55, energy = 55, bomb = 15, bio = 40, rad = 20, fire = 40, acid = 30)
 
-/obj/item/clothing/suit/armor/power_armor/sierra
+/obj/item/clothing/suit/armor/f13/power_armor/sierra
 	name = "NCR scorched sierra power armor"
 	desc = "A set of repurposed T-45d Power Armor, with a bears head mounted onto the shoulder and secured with a strap with a large gold medallion clip holding it snug. It holds a rack of cooling fans and a stream lined set of hydraulic actuators. It appears to have once been lined with a gold trim. It also appears to have a scorched layer of soot burned into it."
 	icon_state = "sierra"
 	item_state = "sierra"
 	armor = list(melee = 80, bullet = 80, laser = 80, energy = 80, bomb = 35, bio = 40, rad = 20, fire = 40, acid = 30)
 	self_weight = 30
-	
+
 // ncr armor end
 
 

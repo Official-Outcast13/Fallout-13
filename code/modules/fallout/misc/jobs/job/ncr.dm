@@ -53,7 +53,7 @@
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/general
 	shoes = /obj/item/clothing/shoes/laceup
-	suit = /obj/item/clothing/suit/armor/power_armor/sierra
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/sierra
 	belt = /obj/item/weapon/storage/belt/military/army
 	head = /obj/item/clothing/head/f13/ncr_captain
 	weapon = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
