@@ -166,6 +166,8 @@
 
 	mob.trigger_aiming(TARGET_CAN_MOVE)
 
+	var/turf/lastLoc = mob.loc
+
 	if(mob.confused)
 		if(mob.confused > 40)
 			step(mob, pick(cardinal))
@@ -177,6 +179,9 @@
 			step(mob, direct)
 	else
 		. = ..()
+
+	if(mob.pulling)
+		mob.Move_Pulled(lastLoc, 1)
 
 	moving = 0
 	if(mob && .)
@@ -315,9 +320,13 @@
 	return 0
 
 //moves the mob/object we're pulling
-/mob/proc/Move_Pulled(atom/A)
+/mob/proc/Move_Pulled(atom/A, forced=0)
 	if(!pulling)
 		return
+	if(forced)
+		pulling.Move(A)
+		return
+		
 	if(pulling.anchored || !pulling.Adjacent(src))
 		stop_pulling()
 		return
@@ -465,4 +474,4 @@
 	if(dir_change_lock)
 		..(newloc, src.dir)
 		return
-	..()
+	..(newloc,direct)
