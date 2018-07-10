@@ -1,8 +1,8 @@
 /obj/item/weapon/sharpener
-	name = "whetstone"
+	name = "sharpening rod"
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "sharpener"
-	desc = "A block that makes things sharp."
+	desc = "A ceramic rod with a egronomic handle on it. It looks to be built to sharpen military knives and other sharp instruments."
 	w_class = WEIGHT_CLASS_SMALL
 	var/used = 0
 	var/increment = 4
