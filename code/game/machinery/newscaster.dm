@@ -916,8 +916,8 @@ var/list/obj/machinery/newscaster/allCasters = list()
 		pages = 0
 		switch(screen)
 			if(0) //Cover
-				dat+="<DIV ALIGN='center'><B><FONT SIZE=6>The Griffon</FONT></B></div>"
-				dat+="<DIV ALIGN='center'><FONT SIZE=2>Nanotrasen-standard newspaper, for use on Nanotrasen? Space Facilities</FONT></div><HR>"
+				dat+="<DIV ALIGN='center'><B><FONT SIZE=6>Capital Post</FONT></B></div>"
+				dat+="<DIV ALIGN='center'><FONT SIZE=2>Your reliable and patriotic source of information</FONT></div><HR>"
 				if(isemptylist(news_content))
 					if(wantedAuthor)
 						dat+="Contents:<BR><ul><B><FONT COLOR='red'>**</FONT>Important Security Announcement<FONT COLOR='red'>**</FONT></B> <FONT SIZE=2>\[page [pages+2]\]</FONT><BR></ul>"

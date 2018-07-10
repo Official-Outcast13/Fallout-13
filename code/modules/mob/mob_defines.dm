@@ -158,3 +158,9 @@
 	var/obj/screen/gun/move/gun_move_icon = null
 	var/obj/screen/gun/run/gun_run_icon = null
 	var/obj/screen/gun/mode/gun_setting_icon = null
+
+	// Lock where you're looking so you cannot change where you look by  - Sansaur
+	var/dir_change_lock = FALSE
+
+	// Nothing can happen to him, and he cannot act if he's timefrozen  - Sansaur
+	var/timefrozen = FALSE

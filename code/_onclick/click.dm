@@ -329,6 +329,9 @@
 
 // Simple helper to face what you clicked on, in case it should be needed in more than one place
 /mob/proc/face_atom(atom/A)
+	// Removing || src.dir_change_lock - Sansaur
+	// We actually want mobs to turn around when they shoot, because if not they could shoot behind their backs without looking.
+	// If that's a wanted feature, then add that condition.
 	if( buckled || stat != CONSCIOUS || !A || !x || !y || !A.x || !A.y )
 		return
 	var/oriDir = dir

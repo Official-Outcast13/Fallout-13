@@ -43,7 +43,7 @@
 	name = "clockwork wall"
 	desc = "A huge chunk of warm metal. The clanging of machinery emanates from within."
 	explosion_block = 2
-	hardness = 10
+	hardness = 60
 	slicing_duration = 120
 	sheet_type = /obj/item/stack/tile/brass
 	sheet_amount = 1
@@ -123,17 +123,17 @@
 	icon_state = "iced"
 	desc = "A wall covered in a thick sheet of ice."
 	canSmoothWith = null
-	hardness = 35
+	hardness = 15
 	slicing_duration = 150 //welding through the ice+metal
 
 /turf/closed/wall/rust
 	name = "rusted wall"
 	desc = "A rusted metal wall."
 	icon = 'icons/turf/walls/rusty_wall.dmi'
-	hardness = 45
+	hardness = 55
 
 /turf/closed/wall/r_wall/rust
 	name = "rusted reinforced wall"
 	desc = "A huge chunk of rusted reinforced metal."
 	icon = 'icons/turf/walls/rusty_reinforced_wall.dmi'
-	hardness = 15
+	hardness = 80

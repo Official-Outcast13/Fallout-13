@@ -77,6 +77,15 @@
 	if(W)
 		W.attempt_wield(M)
 
+/obj/screen/lockDir
+	name = "lock direction"
+	icon = 'icons/mob/screen_midnight.dmi'
+	icon_state = "lockDir"
+	screen_loc = ui_lockdir
+
+/obj/screen/lockDir/Click()
+	var/mob/living/M = usr
+	M.dir_lock()
 
 /obj/screen/area_creator
 	name = "create new area"
