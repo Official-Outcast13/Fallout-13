@@ -90,7 +90,7 @@
 			// We have to make this so it deals more damage the higher the projectile damage is
 			// A grenade launcher deals 60 damage, it should deal a lot of said damage, while a bullet that deals 20-30 should deal less.
 			// The stronger the breaking power in comparison to the wall's resilience, the better.
-			var/divisor = 100 - (Proj.damage + (Proj.break_attack-break_resist))
+			var/divisor = 120 - (Proj.damage + (Proj.break_attack-break_resist))
 			(divisor > 0) ? take_damage(Proj.damage/divisor) : take_damage(Proj.damage)
 	else
 		visible_message("<span class='warning'>[Proj] bounces off the wall!</span>", null, null, 7)

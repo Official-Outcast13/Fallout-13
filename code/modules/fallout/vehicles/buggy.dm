@@ -78,6 +78,8 @@
 	icon_state = "interceptor"
 	names = list("V8 Interceptor", "V8 Interceptor", "V8 Interceptor", "V8 Interceptor", "V8 Interceptor", "V8 Interceptor", "V8 Interceptor")
 
+// Vertibird and thing
+
 /obj/vehicle/fuel/motorcycle/buggy/vertibird
 	name = "vertibird"
 	desc = "A fucking vertibird. Holy shit."
@@ -85,3 +87,23 @@
 	icon_state = "vb-fast"
 	engine_on_sound = 'sound/f13machines/vertibird_start.ogg'
 	engine_loop_sound = 'sound/f13machines/vertibird_loop.ogg'
+	layer = RIPPLE_LAYER+0.5
+
+// We'll make more fixes later - Sansaur
+
+/obj/vehicle/fuel/motorcycle/buggy/vertibird/buckle_mob()
+	. = ..()
+
+/obj/vehicle/fuel/motorcycle/buggy/vertibird/relaymove(mob/user)
+	. = ..()
+
+/obj/vehicle/fuel/motorcycle/buggy/vertibird/post_buckle_mob(mob/living/M)
+	. = ..()
+
+/obj/vehicle/fuel/motorcycle/buggy/vertibird/New()
+	..()
+	name = "vertibird"
+
+/obj/vehicle/fuel/motorcycle/buggy/vertibird/Move(NewLoc,Dir=0,step_x=0,step_y=0)
+	forceMove(NewLoc)
+	..()

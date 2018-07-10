@@ -44,6 +44,9 @@
 	src.density = 0
 	destroyed = 1
 
+/obj/structure/vault_door/ex_act(severity)
+	take_damage(300*severity)
+
 /obj/structure/vault_door/proc/repaired()
 	icon_state = close_state
 	src.set_opacity(1)
