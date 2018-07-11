@@ -24,3 +24,8 @@ sound/f13music/Jet_rimshot.ogg
 sound/f13music/Jet_war.ogg
 ## HONK ##
 sound/ambience/clown.ogg
+## EVENTS ##
+sound/f13machines/vertibird_crash.ogg
+sound/f13machines/vertibird_loop.ogg
+sound/f13machines/vertibird_start.ogg
+sound/f13machines/vertibird_stop.ogg
