@@ -8,6 +8,11 @@
 	caliber = "460"
 	projectile_type = /obj/item/projectile/bullet/deagle/two
 
+/obj/item/ammo_casing/a338
+	desc = "A .338 Lapua bullet casing."
+	caliber = "338"
+	projectile_type = /obj/item/projectile/bullet/doublerifleu
+
 /obj/item/ammo_casing/a455
 	desc = "A .455 Webley bullet casing."
 	caliber = "455"

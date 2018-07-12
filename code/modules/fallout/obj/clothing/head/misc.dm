@@ -12,7 +12,7 @@
 	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/f13/johnberet
-	name = "pre-War Beret"
+	name = "pre-war beret"
 	desc = "What appears to be a pre-War beret of some kind, albeit the organization seems to be unknown."
 	icon_state = "johnberet"
 	item_state = "johnberet"

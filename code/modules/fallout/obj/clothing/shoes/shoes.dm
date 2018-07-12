@@ -144,7 +144,7 @@
 
 /obj/item/clothing/shoes/f13/swimfins
 	name = "swimming fins"
-	desc = "You see, Ivan, when you wear fin in desert, they help you swim good if you find much water."
+	desc = "You see, Ivan, when you wear fin in desert, you go very fast because sand not like water so it go away."
 	icon_state = "flippers"
 	item_state = "flippers"
 	flags = NOSLIP
