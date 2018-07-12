@@ -77,6 +77,8 @@
 	if(mob)
 		mob.swap_hand()
 
+
+
 /client/verb/attack_self()
 	set hidden = 1
 	if(mob)
@@ -164,6 +166,8 @@
 
 	mob.trigger_aiming(TARGET_CAN_MOVE)
 
+	var/turf/lastLoc = mob.loc
+
 	if(mob.confused)
 		if(mob.confused > 40)
 			step(mob, pick(cardinal))
@@ -175,6 +179,9 @@
 			step(mob, direct)
 	else
 		. = ..()
+
+	if(mob.pulling)
+		mob.Move_Pulled(lastLoc, 1)
 
 	moving = 0
 	if(mob && .)
@@ -313,9 +320,13 @@
 	return 0
 
 //moves the mob/object we're pulling
-/mob/proc/Move_Pulled(atom/A)
+/mob/proc/Move_Pulled(atom/A, forced=0)
 	if(!pulling)
 		return
+	if(forced)
+		pulling.Move(A)
+		return
+		
 	if(pulling.anchored || !pulling.Adjacent(src))
 		stop_pulling()
 		return
@@ -435,3 +446,32 @@
 	if(hud_used && hud_used.static_inventory)
 		for(var/obj/screen/mov_intent/selector in hud_used.static_inventory)
 			selector.toggle(src)
+
+
+// Locking direction where you're looking - Sansaur
+
+/mob/proc/dir_lock()
+	set category = "IC"
+	set name = "Lock dir"
+
+	src.dir_change_lock = !src.dir_change_lock
+	to_chat(src, "<span class='info'>[(src.dir_change_lock) ? "You'll now keep looking straight" : "You now may turn around"]</span>")
+	if(src.client)
+		var/obj/screen/lockDir/M
+		for(M in src.client.screen)
+			if(src.dir_change_lock)
+				M.icon_state = "lockDir_active"
+			else
+				M.icon_state = "lockDir"
+
+
+/mob/living/setDir(newdir)
+	// SRSLY? - Sansaur
+	//if(!dir_change_lock)
+	..()
+
+/mob/living/Move(atom/newloc, direct)
+	if(dir_change_lock)
+		..(newloc, src.dir)
+		return
+	..(newloc,direct)

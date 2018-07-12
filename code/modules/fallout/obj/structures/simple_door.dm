@@ -84,9 +84,12 @@
 
 /obj/structure/simple_door/attackby(obj/item/weapon/I, mob/living/user, params)
 	if(!istype(I, /obj/item/stack/sheet/mineral/wood))
-		for(var/obj/structure/barricade/wooden/planks/P in src.loc)
+		for(var/obj/structure/barricade/wooden/planks/P in locate(src.x,src.y,src.z))
 			P.attackby(I, user, params)
 			return
+	else
+		return
+
 	if(istype(I, /obj/item/weapon/screwdriver) && can_disasemble && do_after(user, 5, target = src))
 		for(var/i = 1, i <= material_count, i++)
 			new material_type(get_turf(src))
@@ -101,9 +104,9 @@
 		return 0
 	if(isliving(user))
 		var/mob/living/M = user
-		if(/obj/structure/barricade in src.loc)
-			M << "It won't budge!"
-			return 0
+		for(var/obj/structure/barricade/wooden/planks/P in locate(src.x,src.y,src.z))
+			to_chat(user, "<span class='warning'>It won't budge!</span>")
+			return
 		if(M.client)
 			if(iscarbon(M))
 				var/mob/living/carbon/C = M

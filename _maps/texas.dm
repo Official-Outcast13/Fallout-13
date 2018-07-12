@@ -19,3 +19,4 @@
 	#warn a map has already been included, ignoring wasteland debug.
 
 #endif
+
