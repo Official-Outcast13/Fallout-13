@@ -1,4 +1,3 @@
-
 //In the beginning of time, there was a door subtype called /dooor/ to allow a shitcode copypaste.
 // "Fuck them copypastes, someone pls, make a system for dooor so no one gets to copypaste shit!"
 //  - bartnixon

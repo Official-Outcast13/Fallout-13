@@ -9,11 +9,6 @@
 	desc = "A fine Caesar's Legion recruit bandana."
 	icon_state = "legrecruit"
 
-/obj/item/clothing/mask/bandana/f13/legprime
-	name = "prime bandana"
-	desc = "A fine Caesar's Legion Prime bandana."
-	icon_state = "legrecruit"
-
 /obj/item/clothing/mask/bandana/f13/legdecan
 	name = "decanus bandana"
 	desc = "A fine Caesar's Legion decanus bandana."

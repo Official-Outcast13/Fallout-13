@@ -1,7 +1,7 @@
 //In this file: C4
 
 /obj/item/weapon/c4
-	name = "C4"
+	name = "C-4"
 	desc = "Used to put holes in specific areas without too much extra hole."
 	gender = PLURAL
 	icon = 'icons/obj/grenade.dmi'

@@ -300,7 +300,7 @@
 	head = /obj/item/clothing/head/helmet/f13/legprime
 	belt = /obj/item/weapon/storage/belt/legionbelt/full
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
-	mask = /obj/item/clothing/mask/bandana/f13/legprime
+	mask = /obj/item/clothing/mask/bandana/f13/legrecruit
 	weapon = /obj/item/weapon/gun/ballistic/shotgun/rifle
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \

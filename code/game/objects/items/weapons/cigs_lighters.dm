@@ -313,15 +313,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	smoketime = 7200
 	chem_volume = 50
 
-/obj/item/clothing/mask/cigarette/cigar/reserve
-	name = "\improper His Majesty's Reserve cigar"
-	desc = "A legendary cigar. You probally shouldn't smoke this without testosterone taking up at least 50% of your body mass."
-	icon_state = "cigar2off"
-	icon_on = "cigar2on"
-	icon_off = "cigar2off"
-	smoketime = 2000
-	chem_volume = 100
-
 /obj/item/weapon/cigbutt
 	name = "cigarette butt"
 	desc = "A manky old cigarette butt."

@@ -1,7 +1,7 @@
 //Fallout 13 Raider faction roles
 
 /datum/job/gangleader
-	title = "Raider Gang Leader"
+	title = "Gang Leader"
 	desc = "A criminal mastermind.<br>If someone goes against you, you either make an offer they can't refuse, or make sure no one will find the body later."
 	flag = GANGLEAD
 	department_flag = MEDSCI
@@ -62,7 +62,7 @@
 	)
 
 /datum/outfit/job/gangleader
-	name = "Raider Gang Leader"
+	name = "Gang Leader"
 	uniform = /obj/item/clothing/under/f13/villain
 	shoes = /obj/item/clothing/shoes/laceup
 

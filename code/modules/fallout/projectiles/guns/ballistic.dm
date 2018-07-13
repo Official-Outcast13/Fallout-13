@@ -54,8 +54,8 @@
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/gun/ballistic/automatic/pistol/luger
-	name = "chinese pistol"
-	desc = "A classic .30 caliber (nine milimeter) Luger P08 chinese clone from WW2 surplus. This thing is older than the people shooting it."
+	name = "P08"
+	desc = "A classic .30 caliber (nine milimeter) Luger P08 pistol from WW2 surplus. This thing is older than the people shooting it."
 	icon_state = "luger"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	item_state = "luger"
@@ -600,7 +600,7 @@
 	recoil = 1
 
 /obj/item/weapon/gun/ballistic/automatic/pistol/automag
-	name = "AMC Automag Model 180"
+	name = "AMC AutoMag Model 180"
 	desc = "The AMC AutoMag Model 180 is a large caliber semi-automatic pistol designed between 1966 and 1971 by the Auto Mag Corporation to make a semi-automatic pistol chambered in .44 Remington Magnum, and this particular gun seems to have been fitted with sleek wooden grips."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "automag"
@@ -615,7 +615,7 @@
 	recoil = 1
 
 /obj/item/weapon/gun/ballistic/automatic/pistol/longslide
-	name = "AMT Longslide"
+	name = "AMT Hardballer Longslide"
 	icon_state = "longslide"
 	desc = "A very massive, almost unwieldable bigger brother to the Colt Model 1911A1. Still chambers .45 ACP ammunition."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -851,7 +851,7 @@
 	scopetype = /obj/screen/fullscreen/scope/short
 
 /obj/item/weapon/gun/ballistic/automatic/rifle
-	name = "308. battle rifle"
+	name = "MA4 Battle Rifle"
 	icon_state = "rifle-automatic"
 	item_state = "rifle308"
 	wielded_icon = "rifle308-wielded"
@@ -1217,7 +1217,7 @@
 	wielded_icon = "terminator-wielded"
 
 /obj/item/weapon/gun/ballistic/shotgun/winchesterrifle
-	name = "lever-action rifle"
+	name = "lever action repeater"
 	desc = "This lever action rifle appears to have been based on a Winchester model 1873, but with an amazing magazine capacity and an outlandish supernatural quality to it you can't quite comprehend."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "winchester"
@@ -1247,7 +1247,7 @@
 	wielded_icon = "dinnerbell-wielded"
 
 /obj/item/weapon/gun/ballistic/shotgun/huntingshotgun
-	name = "Remington 870"
+	name = "R870"
 	desc = "The Remington Model 870 is a pump-action shotgun manufactured by Remington Arms Company, LLC. It was widely used by the public for sport shooting, hunting, and self-defense and used by law enforcement and military organizations worldwide before the war. Chambered in 12 Gauge shells."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "huntingshotgun"
@@ -1312,25 +1312,11 @@
 	icon_state = "doublerifle"
 	item_state = "doublerifle"
 	w_class = WEIGHT_CLASS_BULKY
-	force = 20
+	force = 10
 	flags = CONDUCT
 	slot_flags = SLOT_BACK
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/doublerifle
 	wielded_icon = "doublerifle-wielded"
-
-/obj/item/weapon/gun/ballistic/revolver/doublerifle
-	name = "ranger's double rifle"
-	desc = "A hefty double barrel over-rifle with a almost super natural quality to it. Chambered in 338. Lapua. It appears to have a extremely complicated mechanical optic reticle on it. It appears to have a additional complex mechanical extractor that ejects the casings as they are fired for faster reloading."
-	icon_state = "doublerifle"
-	item_state = "doublerifle"
-	w_class = WEIGHT_CLASS_BULKY
-	force = 30
-	flags = CONDUCT
-	slot_flags = SLOT_BACK
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/doublerifleu
-	wielded_icon = "doublerifle-wielded"
-	casing_ejector = 1
-	recoil = 2
 
 /obj/item/weapon/gun/ballistic/shotgun/huntsman
 	name = "Huntsman"
@@ -1351,7 +1337,7 @@
 	attack_verb = list("stabbed", "sliced", "cut", "slashed")
 
 /obj/item/weapon/gun/ballistic/automatic/bozar
-	name = "MV-5 Bozar"
+	name = "MM5 Bozar"
 	desc = "The ultimate refinement of the sniper's art.<br>Although somewhat finicky and prone to jamming if not kept immacuately clean, its accuracy more than makes up for its extra maintenance requirements."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "bozar"

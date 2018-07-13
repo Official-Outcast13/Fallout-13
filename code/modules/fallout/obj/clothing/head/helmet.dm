@@ -418,7 +418,7 @@
 		A.UpdateButtonIcon()
 
 /obj/item/clothing/head/helmet/power_armor/shocktrooper
-	name = "hellfire power helmet"
+	name = "shocktrooper power helmet"
 	desc = "A 'black devil' power armor helmet used exclusively by Enclave military forces, developed after the Great War and the destruction of the Enclave Oil Rig in 2241.<br>You can't lie, it looks pretty badass."
 	icon_state = "shocktrooper"
 	item_state = "shocktrooper"
