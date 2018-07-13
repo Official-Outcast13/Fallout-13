@@ -96,14 +96,6 @@
 	dismemberment = 25
 	armour_penetration = 100
 
-/obj/item/projectile/bullet/doublerifleu
-	name = ".338 Lapua round"
-	damage = 70
-	stun = 100
-	weaken = 100
-	dismemberment = 25
-	armour_penetration = 100
-
 /obj/item/projectile/bullet/winchester
 	name = ".30-30 round"
 	damage = 80

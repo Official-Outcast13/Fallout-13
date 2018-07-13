@@ -198,12 +198,6 @@
 	caliber = "460"
 	max_ammo = 2
 
-/obj/item/ammo_box/magazine/internal/shot/doublerifleu
-	name = "rifle .338 magazine"
-	ammo_type = /obj/item/ammo_casing/a338
-	caliber = "338"
-	max_ammo = 2
-
 /obj/item/ammo_box/magazine/internal/shot/winchester30
 	name = "rifle .30-30 magazine"
 	ammo_type = /obj/item/ammo_casing/a30winchester

@@ -283,7 +283,7 @@
 	..()
 
 /obj/item/weapon/melee/classic_baton/vampirekiller
-	name = "vampire killer whip"
+	name = "Vampire Killer whip"
 	desc = "A very ancient looking and feeling bullwhip made from oddly resilient leather that has been tightly knotted down to the last inch. Made from a very sturdy 8-plait construction, the handle of the whip seems to have been woven into the shape of a crucifix, presumably around a wooden insert or some other tough core material."
 	icon_state = "vampirekiller"
 	item_state = "vampirekiller"
@@ -304,7 +304,7 @@
 	..()
 
 /obj/item/weapon/melee/classic_baton/vampirekillerchain
-	name = "vampire killer chain whip"
+	name = "Vampire Killer chain whip"
 	desc = "A very ancient looking weapon similar to a flail consisting of a spiked chain with a cross-like tip for offensive purposes. The handle of the whip seems to have been forged into the shape of a crucifix, presumably from the same strange metallurgy as the chain."
 	icon_state = "stokercombatcross"
 	item_state = "stokercombatcross"
@@ -326,7 +326,7 @@
 
 
 /obj/item/weapon/melee/bullwhip
-	name = "bull whip"
+	name = "Bull whip"
 	desc = "A very professionally made bullwhip made from black leather that has been tightly braided down to the last inch. Remember, not safe for BDSM practices"
 	icon_state = "bullwhip"
 	item_state = "bullwhip"
@@ -337,7 +337,7 @@
 	hitsound = 'sound/weapons/bullwhip.ogg'
 
 /obj/item/weapon/melee/holywhip
-	name = "holy whip"
+	name = "Holy whip"
 	desc = "A very dated looking bullwhip that was ritualistically blessed and once used by men of faith to vanquish the undead. Made from a very sturdy 8-plait construction and tightly braided black leather, the handle of the whip seems to have brass inlays, presumably around a wooden insert or some other tough core material for added durability."
 	icon_state = "bullwhip"
 	item_state = "bullwhip"
@@ -355,7 +355,7 @@
 	..()
 
 /obj/item/weapon/melee/classic_baton/truevampirekiller
-	name = "vampire killer whip"
+	name = "Vampire Killer whip"
 	desc = "A very ancient looking and feeling bullwhip made from oddly resilient leather that has been tightly braided down to the last inch. Made from a very sturdy 8-plait construction, the handle of the whip seems to have brass inlays, presumably around a wooden insert or some other tough core material for added durability. The most immediate and distinguishing oddity about this whip is the strange pulsating aura that surrounds it, glowing with a holy presence."
 	icon_state = "truevampirekiller"
 	item_state = "truevampirekiller"
@@ -376,7 +376,7 @@
 	..()
 
 /obj/item/weapon/melee/classic_baton/warclub
-	name = "war club"
+	name = "War club"
 	desc = "A traditional Native American style war club, it's handle fashioned from an oak rod whereas the head of it is seemingly made from a large stone wrapped in green cloth; all held together with excessive use of sisal rope. Seems like it could be good for knocking someone over the head or disarming them."
 	icon_state = "warclub"
 	item_state = "warclub"

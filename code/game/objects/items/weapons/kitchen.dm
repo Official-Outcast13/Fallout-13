@@ -51,7 +51,7 @@
 
 
 /obj/item/weapon/kitchen/knife
-	name = "kitchen knife"
+	name = "Kitchen knife"
 	icon_state = "knife"
 	item_state = "myersknife"
 	desc = "A general purpose butcher's knife made by Lamson. Great for chopping up vegetables, or slashing horny teenagers."
@@ -82,7 +82,7 @@
 	return (BRUTELOSS)
 
 /obj/item/weapon/kitchen/knife/ritual
-	name = "ritual knife"
+	name = "Ritual knife"
 	desc = "The unearthly energies that once powered this blade are now dormant."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "render"
@@ -104,7 +104,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/kitchen/knife/butcher/myers
-	name = "kitchen knife"
+	name = "Kitchen knife"
 	icon_state = "knife"
 	item_state = "myersknife"
 	desc = "A general purpose butcher's knife made by Lamson. Great for chopping up vegetables, or slashing horny teenagers."
@@ -127,7 +127,7 @@
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "cut")
 
 /obj/item/weapon/kitchen/knife/rolandknife
-	name = "bowie knife"
+	name = "Bowie knife"
 	icon_state = "rolandknife"
 	item_state = "rolandknife"
 	desc = "A dated knife of ancient construction, most noted for it's sandalwood handle and brass furniture decorating it."
@@ -139,7 +139,7 @@
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "cut")
 
 /obj/item/weapon/kitchen/knife/cosmicknife
-	name = "cosmic knife"
+	name = "Cosmic knife"
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "cosmicknife"
 	item_state = "cosmicknife"

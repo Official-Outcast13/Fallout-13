@@ -261,7 +261,7 @@
  */
 /obj/item/weapon/twohanded/dualsaber
 	icon_state = "dualsaber0"
-	name = "double energy saber"
+	name = "Double-bladed laser sword"
 	desc = "A sophisticated, albeit crudely crafted weapon composed of metal scrap and leftover machine parts that appears to utilize a magnetic stabilizing ring to contain a burning hot laser beam within it's field to serve as a sword of sorts. An elegant weapon, for a more civilized age."
 	force = 3
 	throwforce = 5
@@ -443,9 +443,9 @@
 
 /obj/item/weapon/twohanded/required/chainsaw/doomslayer
 	name = "THE GREAT COMMUNICATOR"
-	desc = "<span class='warning'>VRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR!!!</span>"
+	desc = "<span class='warning'>VRRRRRRR!!!</span>"
 	armour_penetration = 100
-	force_on = 50
+	force_on = 30
 
 /obj/item/weapon/twohanded/required/chainsaw/doomslayer/hit_reaction(mob/living/carbon/human/owner, attack_text, final_block_chance, damage, attack_type)
 	if(attack_type == PROJECTILE_ATTACK)
@@ -546,7 +546,7 @@
 
 /obj/item/weapon/twohanded/vibro_weapon
 	icon_state = "hfrequency0"
-	name = "vibrostatic blade"
+	name = "vibro sword"
 	desc = "A potent weapon capable of cutting through nearly anything. Wielding it in two hands will allow you to deflect gunfire."
 	force_unwielded = 20
 	force_wielded = 40
@@ -581,7 +581,7 @@
 
 /obj/item/weapon/twohanded/shizenblade
 	icon_state = "shizenblade0"
-	name = "high frequency blade"
+	name = "High Frequency Blade"
 	desc = "A weapon from a far off land, the trademark killing instrument of the Shinjiketo Assassin clan. Its pulsing blade vibrates at unthinkable speeds, able to cut through most anything and reflect all manner of incoming attacks. Deadly in the hands of an amateur, terrifying in the hands of a master."
 	force_unwielded = 70
 	force_wielded = 90
@@ -652,7 +652,7 @@
  */
 /obj/item/weapon/twohanded/skybulge	//Copy+paste job from bonespear because no explosions.
 	icon_state = "sky_bulge0"
-	name = "sky buldge"
+	name = "Sky Bulge"
 	desc = "A legendary stick with a very pointy tip. Looks to be used for throwing. And jumping. Can be stubborn if you throw too much." //TODO: Be funnier.
 	force = 10 //This thing aint for robusting.
 	w_class = WEIGHT_CLASS_BULKY
@@ -702,7 +702,7 @@
 /obj/item/weapon/twohanded/ingopolearm
 	icon_state = "igonpolearm0"
 	item_state = "igonpolearm0"
-	name = "pole axe"
+	name = "Poleaxe"
 	desc = "A true medieval weapon, God have mercy on the poor bastard who faces off on the end of this weapon of war."
 	force_unwielded = 20
 	force_wielded = 40
@@ -752,7 +752,7 @@
 
 
 /obj/item/weapon/bumpersword
-	name = "bumper sword"
+	name = "Bumper sword"
 	desc = "The bumper sword, as the name suggests, consists of a rusty car bumper that has been flattened and sharpened into a thick, heavy blade. The license plate is still attached, and an exhaust pipe strapped to the unsharpened end serves as a makeshift handle. Typically favored by Caesar's Legion due to it's immense cutting power."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "bumpersword"
@@ -764,7 +764,7 @@
 	block_chance = 30
 	throwforce = 35
 	w_class = 3
-	armour_penetration = 20
+	armour_penetration = 100
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	sharpness = IS_SHARP
