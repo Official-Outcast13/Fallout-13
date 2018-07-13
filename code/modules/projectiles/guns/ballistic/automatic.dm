@@ -356,7 +356,7 @@
 
 /obj/item/weapon/gun/ballistic/automatic/sniper_rifle
 	name = "anti materiel rifle"
-	desc = "A long ranged weapon that does significant damage. No, you can't quickscope."
+	desc = "A heavy bolt action rifle chambered in 50. BMG, for when you need to take out that terrorist behind those three walls and that car."
 	icon_state = "sniper"
 	item_state = "sniper"
 	recoil = 2
@@ -383,12 +383,12 @@
 
 /obj/item/weapon/gun/ballistic/automatic/sniper_rifle/syndicate
 	name = "anti material rifle"
-	desc = "An illegally modified .50 cal sniper rifle with supression compatibility. Quickscoping still doesn't work."
+	desc = "An illegally modified .50 cal sniper rifle with supression compatibility. For when you need to take out that terrorist behind those three walls and that car, but quietly.."
 	pin = /obj/item/device/firing_pin/implant/pindicate
 	origin_tech = "combat=7;syndicate=6"
 
 /obj/item/weapon/gun/ballistic/automatic/punisher
-	name = "Punisher"
+	name = "punisher"
 	desc = "A very large and impactical cross-shaped sniper rifle chambered in the uncontrollable .50 BMG round, good for long distance work or preaching."
 	icon_state = "punisher"
 	item_state = "punisher"

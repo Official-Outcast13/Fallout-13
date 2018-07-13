@@ -41,7 +41,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/police
-	name = "pre-War police uniform"
+	name = "pre-war police uniform"
 	desc = "Golden classics of pre-War police officers."
 	icon_state = "retro_police"
 	item_state = "b_suit"
@@ -67,7 +67,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/rolandclothes
-	name = "Gunslinger's apparel"
+	name = "gunslinger's apparel"
 	desc = "What appears to be a laceup cantina-style western shirt with a worn red bandana secured around the collar. Accompanying it is a pair of faded grey jeans buckled together with a complex gun belt display suitable for a desperado."
 	icon_state = "rolandclothes"
 	item_state = "rolandclothes"
@@ -75,7 +75,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/rolandclothesremake
-	name = "Gunslinger's apparel"
+	name = "gunslinger's apparel"
 	desc = "What appears to be a laceup cantina-style western shirt with a worn red bandana secured around the collar. Accompanying it is a pair of faded brown jeans buckled together with a complex gun belt display suitable for a desperado."
 	icon_state = "rolandclothesremake"
 	item_state = "rolandclothesremake"
@@ -83,7 +83,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/gunslingerclothes
-	name = "Gunslinger's apparel"
+	name = "gunslinger's apparel"
 	desc = "What appears to be a laceup cantina-style western shirt with a worn red bandana secured around the collar. Accompanying it is a pair of faded brown jeans buckled together with a complex gun belt display suitable for a desperado."
 	icon_state = "gunslingerclothes"
 	item_state = "gunslingerclothes"
@@ -91,7 +91,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/rolandclothesalt
-	name = "Gunslinger's apparel"
+	name = "gunslinger's apparel"
 	desc = "What appears to be a laceup cantina-style western shirt with a worn white bandana secured around the collar. Accompanying it is a pair of faded black jeans buckled together with a complex gun belt display suitable for a desperado. and a tanned leather vest."
 	icon_state = "rolandclothesalt"
 	item_state = "rolandclothesalt"
@@ -99,7 +99,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/rolandclothestwo
-	name = "Gunslinger's apparel"
+	name = "gunslinger's apparel"
 	desc = "What appears to be a laceup cantina-style western shirt with a worn brown bandana secured around the collar. Accompanying it is a pair of faded blue jeans buckled together with a complex gun belt display suitable for a desperado."
 	icon_state = "rolandclothestwo"
 	item_state = "rolandclothestwo"
@@ -107,7 +107,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/terminatorclothes
-	name = "Biker's apparel"
+	name = "biker's apparel"
 	desc = "A very dated 80's-era biker getup, consisting of leather pants and a long sleeved muscle shirt. You'll be back."
 	icon_state = "terminatorclothes"
 	item_state = "terminatorclothes"
@@ -132,7 +132,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/bdu //WalterJe military standarts.
-	name = "BDU"
+	name = "battle dress uniform"
 	desc = "A standard military Battle Dress Uniform."
 	icon_state = "bdu"
 	item_state = "xenos_suit"
@@ -143,7 +143,7 @@
 	self_weight = 3
 
 /obj/item/clothing/under/f13/dbdu
-	name = "DBDU"
+	name = "desert battle dress uniform"
 	desc = "A military Desert Battle Dress Uniform."
 	icon_state = "dbdu"
 	item_state = "brownjsuit"
@@ -178,7 +178,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/relaxedwear
-	name = "pre-War male relaxedwear"
+	name = "pre-war male relaxedwear"
 	desc = "A dirty long-sleeve blue shirt with a greenish brown sweater-vest and slacks."
 	icon_state = "relaxedwear_m"
 	item_state = "g_suit"
@@ -186,7 +186,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/spring
-	name = "pre-War male spring outfit"
+	name = "pre-war male spring outfit"
 	desc = "A dirty long-sleeve beige shirt with a red sweater-vest and brown trousers."
 	icon_state = "spring_m"
 	item_state = "brownjsuit"
@@ -194,7 +194,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/formal
-	name = "pre-War male formal wear"
+	name = "pre-war male formal wear"
 	desc = "A black jacket with an old white shirt and dirty dark purple trousers.<br>Traditionally worn by the richest of the post-War world."
 	icon_state = "formal_m"
 	item_state = "judge"
@@ -384,25 +384,25 @@
 	can_adjust = 1
 
 /obj/item/clothing/under/f13/vault/v13 //The Legend is here.
-	name = "Vault 13 jumpsuit"
+	name = "vault 13 jumpsuit"
 	desc = "The regulation clothing worn by the vault dwellers of Vault-Tec vaults. It's made of sturdy leather.<br>This jumpsuit has number 13 on the back."
 	icon_state = "vault13"
 	item_color = "vault13"
 
 /obj/item/clothing/under/f13/vault/v113
-	name = "Vault 113 jumpsuit"
+	name = "vault 113 jumpsuit"
 	desc = "The regulation clothing worn by the vault dwellers of Vault-Tec vaults. It's made of sturdy leather.<br>This jumpsuit has number 113 on the back."
 	icon_state = "vault113"
 	item_color = "vault113"
 
 /obj/item/clothing/under/f13/vault/v21
-	name = "Vault 21 jumpsuit"
+	name = "vault 21 jumpsuit"
 	desc = "The regulation clothing worn by the vault dwellers of Vault-Tec vaults. It's made of sturdy leather.<br>This jumpsuit has number 21 on the back."
 	icon_state = "vault21"
 	item_color = "vault21"
 
 /obj/item/clothing/under/f13/vault/v42
-	name = "Vault 42 jumpsuit"
+	name = "vault 42 jumpsuit"
 	desc = "The regulation clothing worn by the vault dwellers, of Vault-Tec vaults built to solve the Ultimate Question of life, Universe, and everything. It's made of sturdy leather.<br>This jumpsuit has number 42 on the back."
 	icon_state = "vault42"
 	item_color = "vault42"
@@ -825,7 +825,7 @@
 	alt_covers_chest = 1
 
 /obj/item/clothing/under/female/roboticist
-	desc = "Female variant of badass jumpsuit - great for industrial work."
+	desc = "Female variant of the jumpsuit used by robotics."
 	name = "female roboticist's jumpsuit"
 	icon_state = "roboticsf"
 	item_state = "jensensuit"

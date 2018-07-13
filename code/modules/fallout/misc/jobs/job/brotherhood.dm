@@ -1,7 +1,7 @@
 //Fallout 13 Brotherhood of Steel faction roles
 
 /datum/job/elder
-	title = "Elder"
+	title = "Brotherhood Elder"
 	desc = "A mentor, the source of wisdom.<br>You are the one who shall fulfill destiny."
 	flag = ELDER
 	department_head = list("Brotherhood of Steel command HQ")
@@ -55,7 +55,7 @@
 	minimal_access = list()
 
 /datum/outfit/job/elder
-	name = "Elder"
+	name = "Brotherhood Elder"
 	backpack = null
 	satchel = null
 	uniform = /obj/item/clothing/under/f13/combat
@@ -72,7 +72,7 @@
 //Brotherhood Paladin
 
 /datum/job/paladin
-	title = "Paladin"
+	title = "Brotherhood Paladin"
 	desc = "A guardian, the bringer of light.<br>You are the one who shall protect others."
 	flag = PALADIN
 	department_head = list("elder")
@@ -120,7 +120,7 @@
 	minimal_access = list()
 
 /datum/outfit/job/paladin
-	name = "Paladin"
+	name = "Brotherhood Paladin"
 	backpack = null
 	satchel = null
 	gloves = /obj/item/clothing/gloves/f13/military
@@ -137,7 +137,7 @@
 //Brotherhood Knight
 
 /datum/job/knight
-	title = "Knight"
+	title = "Brotherhood Knight"
 	desc = "A warrior, the keeper of peace.<br>You are the one who shall bring justice."
 	flag = KNIGHT
 	department_head = list("elder", "paladin")
@@ -182,7 +182,7 @@
 	minimal_access = list()
 
 /datum/outfit/job/knight
-	name = "Knight"
+	name = "Brotherhood Knight"
 	backpack = null
 	satchel = null
 	gloves = /obj/item/clothing/gloves/f13/military
@@ -199,7 +199,7 @@
 //Scribes!!
 
 /datum/job/scribe
-	title = "Scribe"
+	title = "Brotherhood Scribe"
 	desc = "The studious..<br>Your knowledge and expertise guide your brothers to glory."
 	flag = SCRIBE
 	department_head = list("elder", "paladin")
@@ -244,7 +244,7 @@
 	minimal_access = list()
 
 /datum/outfit/job/scribe
-	name = "Scribe"
+	name = "Brotherhood Scribe"
 	backpack = null
 	satchel = null
 	gloves = null
