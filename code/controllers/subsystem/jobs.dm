@@ -23,6 +23,7 @@ var/datum/subsystem/job/SSjob
 		SetupOccupations()
 	if(config.load_jobs_from_txt)
 		LoadJobs()
+	SetupFactionRadios()
 	..()
 
 
@@ -65,6 +66,12 @@ var/datum/subsystem/job/SSjob
 			continue
 #endif
 		human_factions[faction.id] = faction
+
+/datum/subsystem/job/proc/SetupFactionRadios()
+	var/obj/item/device/radio/R
+	for(R in world)
+		R.attempt_faction_radio_freq()
+		
 
 /datum/subsystem/job/proc/SetupStatus()
 	var/list/status = subtypesof(/datum/status)

@@ -3,11 +3,18 @@
 	desc = "How do you even reuse a bullet?"
 	var/ammo_type = /obj/item/ammo_casing/caseless
 	var/dropped = 0
+	var/embeddable = 0
 	impact_effect_type = null
 
 /obj/item/projectile/bullet/reusable/on_hit(atom/target, blocked = 0)
 	. = ..()
+	if(embeddable)
+		if(prob(damage))
+			handle_embed(target)
+			return .
+
 	handle_drop()
+
 
 /obj/item/projectile/bullet/reusable/on_range()
 	handle_drop()
@@ -18,6 +25,16 @@
 		var/turf/T = get_turf(src)
 		new ammo_type(T)
 		dropped = 1
+
+/obj/item/projectile/bullet/reusable/proc/handle_embed(atom/target)
+	if(istype(target, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = target
+		if(!dropped)
+			var/turf/T = get_turf(src)
+			var/obj/item/ammo_casing/caseless/EMBEDDER = new ammo_type(T)
+			var/obj/item/bodypart/L = pick(H.bodyparts)
+			H.embed_item_in_bodypart(EMBEDDER, L)
+			dropped = 1
 
 /obj/item/projectile/bullet/reusable/magspear
 	name = "magnetic spear"
@@ -73,5 +90,6 @@
 	icon_state = "arrow"
 	ammo_type = /obj/item/ammo_casing/caseless/arrow
 	range = 10
-	damage = 25
+	damage = 35 // Arrows hurt a lot, actually, and if a kitchen knife is going to deal 35, an arrow should too - Sansaur
 	damage_type = BRUTE
+	embeddable = 1

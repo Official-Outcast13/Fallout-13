@@ -323,7 +323,7 @@
 /mob/proc/Move_Pulled(atom/A, forced=0)
 	if(!pulling)
 		return
-	if(forced)
+	if(forced && !pulling.anchored)
 		pulling.Move(A)
 		return
 		

@@ -163,7 +163,7 @@
 						display_name = "[holder.fakekey]/([src.key])"
 					else
 						display_name = holder.fakekey
-			to_chat(C, "<font color='[normal_ooc_colour]'><span class='ooc'><span class='prefix'>LOOC:</span> <EM>[display_name]:</EM> <span class='message'>[msg]</span></span></font>")
+			to_chat(C, "<font color='[normal_looc_colour]'><span class='ooc'><span class='prefix'>|LOOC|:</span> <EM>[display_name]:</EM> <span class='message'>[msg]</span></span></font>")
 
 /mob/proc/get_looc_source()
 	return src
@@ -180,6 +180,7 @@
 	to_chat(world, "<B>The OOC channel has been globally [ooc_allowed ? "enabled" : "disabled"].</B>")
 
 var/global/normal_ooc_colour = OOC_COLOR
+var/global/normal_looc_colour = LOOC_COLOR
 
 /client/proc/set_ooc(newColor as color)
 	set name = "Set Player OOC Color"

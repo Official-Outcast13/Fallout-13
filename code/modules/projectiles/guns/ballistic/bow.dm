@@ -41,6 +41,8 @@
 		ready_to_fire = TRUE
 		playsound(user, draw_sound, 100, 1)
 		update_icon()
+		if(!wielded)
+			attempt_wield(user)
 	else
 		ready_to_fire = FALSE
 		update_icon()
@@ -64,6 +66,12 @@
 	. = ..()
 	ready_to_fire = FALSE
 	update_icon()
+
+/obj/item/weapon/gun/ballistic/bow/process_fire(atom/target as mob|obj|turf, mob/living/user as mob|obj, message = 1, params, zone_override, bonus_spread = 0)
+	. = ..()
+	if(wielded)
+		attempt_wield(user)
+
 
 // ammo
 /obj/item/ammo_box/magazine/internal/bow
@@ -92,7 +100,7 @@
 	caliber = "arrow"
 
 
-	/obj/item/ammo_casing/caseless/bolt
+/obj/item/ammo_casing/caseless/bolt
 	name = "arrow"
 	desc = "It just looks like a piece of rebar..."
 	icon_state = "arrow-live"
