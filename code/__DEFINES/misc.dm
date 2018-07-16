@@ -278,6 +278,7 @@ var/global/list/ghost_others_options = list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DE
 
 //Color Defines
 #define OOC_COLOR  "#002eb8"
+#define LOOC_COLOR  "#004942"
 
 /////////////////////////////////////
 // atom.appearence_flags shortcuts //

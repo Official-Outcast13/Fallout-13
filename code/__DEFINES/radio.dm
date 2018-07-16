@@ -1,5 +1,5 @@
 #define MIN_FREE_FREQ 1201
 #define MAX_FREE_FREQ 1599
 
-#define MIN_FREQ 1441
-#define MAX_FREQ 1489
+#define MIN_FREQ 1400
+#define MAX_FREQ 1499
